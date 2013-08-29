@@ -96,21 +96,38 @@ $css = <<<CSS
 	border-radius:0;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
-#profiles-list h3 a {
+#profiles-list h2 a {
 	font-weight:normal;
-	color:#63174D;
+	text-transform: uppercase;
 }
 #profiles-list .item .item-block {
     background-color: #fdf7fc;
     border: 1px solid #E3E3E3;
-    border-radius: 4px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
     margin-bottom: 20px;
     min-height: 20px;
-    padding: 20px;
+    padding: 15px;
 }
 #profiles-list .text-center > span {
 	color:#63174D;
+}
+#profiles-list .btn {
+	position: relative;
+}
+#profiles-list .btn:before,
+#profiles-list .btn:after {
+	content: " ";
+	display:block;
+	background:#fbd5eb;
+	height:16px;
+	width:16px;
+	position:absolute;
+	left:-17px;
+	top:5px;
+}
+#profiles-list .btn:after {
+	left:auto;
+	right:-17px;
 }
 
 CSS;
@@ -149,22 +166,16 @@ foreach($this->families as $family) :
 			echo '<img class="thumbnail" src="http://www.angeladoptioninc.com/uploads/profiles/'.$family->id.'/'.$main_image.'" alt="'.$family->last_name.' Family" />';
 			echo '</a>';
 			?>
-			<h3 class="text-center">
+			<h2 class="text-center">
 				<a href="<?php echo $link; ?>"><?php echo $fullname; ?></a>
-			</h3>
+			</h2>
 			<div class="text-center">
 				<span>FAMILY TYPE: <span class="muted">Married</span></span><br />
 				<span>LOCATION: <span class="muted">Illinois</span></span>
 			</div>
 			<br />
 			<div class="text-center">
-				<a href="javascript:void(0)" class="icon icon-facebook-3"></a>
-				<a href="javascript:void(0)" class="icon icon-pinterest"></a>
-				<a href="javascript:void(0)" class="icon icon-flickr-4"></a>
-			</div>
-			<br />
-			<div class="text-center">
-				<a href="<?php echo $link; ?>" class="btn btn-primary">Learn About <?php echo ProfilesHelper::meOrUs(); ?></a>
+				<a href="<?php echo $link; ?>" class="btn btn-primary">View Profile</a>
 			</div>
 		</div>
 	</div>	
