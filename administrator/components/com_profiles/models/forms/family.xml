@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+       <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="username" type="text" size="20" class="inputbox"
+                 label="Username"
+                 description="This is the last part of the URL. /profile/username"
+                 filter="safehtml" /> 
+                 
+		<field
+			name="profile_status"
+			type="list"
+			label="Profiles Status"
+			class="inputbox"
+			size="1"
+			required="true">
+                <option value="">- Select Profile Status -</option>
+                <option value="0">COM_PROFILES_PROFILE_STATUS_0</option>
+                <option value="1">COM_PROFILES_PROFILE_STATUS_1</option>
+                <option value="2">COM_PROFILES_PROFILE_STATUS_2</option>
+            </field>
+
+       <field name="first_name" type="text" size="40" class="inputbox" required="true"
+                 label="COM_PROFILES_FORM_LBL_FAMILY_FIRST_NAME"
+                 filter="safehtml" /> 
+
+       <field name="spouse_name" type="text" size="40" class="inputbox"
+                 label="COM_PROFILES_FORM_LBL_FAMILY_SPOUSE_NAME" 
+                 filter="safehtml" /> 
+
+       <field name="last_name" type="text" size="40" class="inputbox"
+                 label="COM_PROFILES_FORM_LBL_FAMILY_LAST_NAME" 
+                 filter="safehtml" /> 
+
+       <field name="video" type="url" size="40" class="inputbox"
+                 label="COM_PROFILES_FORM_LBL_FAMILY_VIDEO" description="COM_PROFILES_FORM_DESC_FAMILY_VIDEO" /> 
+
+       <field name="pdf" type="file" size="40" class="inputbox"
+                 label="COM_PROFILES_FORM_LBL_FAMILY_PDF" />
+
+       <field name="dear_birthmother" type="editor" buttons="true"
+                class="inputbox"
+                filter="safehtml"
+                label="Birthmother Letter"  /> 
+
+       <field name="description" type="editor" buttons="true"
+                class="inputbox"
+                filter="safehtml"
+                label="Description" />
+
+       <field name="about_us" type="editor" buttons="true"
+                class="inputbox"
+                filter="safehtml"
+                label="COM_PROFILES_FORM_LBL_FAMILY_ABOUT_US"  />
+
+       <field name="about_us_image" type="file" class="inputbox"
+                 label="COM_PROFILES_FORM_LBL_FAMILY_ABOUT_US_IMAGE"  />
+
+       <field name="do_for_fun" type="editor" buttons="true"
+                class="inputbox"
+                filter="safehtml"
+                label="What we do for fun."  />
+
+       <field name="do_for_fun_image" type="file" class="inputbox"
+                 label="What we do for fun image."  /> 
+
+       <field name="our_home" type="editor" buttons="true"
+                class="inputbox"
+                filter="safehtml"
+                label="COM_PROFILES_FORM_LBL_FAMILY_OUR_HOME"  /> 
+
+       <field name="our_home_image" type="file" class="inputbox"
+                 label="COM_PROFILES_FORM_LBL_FAMILY_OUR_HOME_IMAGE" /> 
+
+       <field name="ext_family" type="editor" buttons="true"
+                class="inputbox"
+                filter="safehtml"
+                label="COM_PROFILES_FORM_LBL_FAMILY_EXT_FAMILY"  /> 
+
+       <field name="ext_family_image" type="file" class="inputbox"
+                 label="COM_PROFILES_FORM_LBL_FAMILY_EXT_FAMILY_IMAGE" /> 
+
+       <field name="ext_family_image_spouse" type="file" class="inputbox"
+                 label="COM_PROFILES_FORM_LBL_FAMILY_EXT_FAMILY_IMAGE_SPOUSE" />
+
+       <field name="family_traditions" type="editor" buttons="true"
+                class="inputbox"
+                filter="safehtml"
+                label="COM_PROFILES_FORM_LBL_FAMILY_FAMILY_TRADITIONS" /> 
+
+       <field name="family_traditions_image" type="file" class="inputbox"
+                 label="COM_PROFILES_FORM_LBL_FAMILY_FAMILY_TRADITIONS_IMAGE" />
+                 
+       
+       <field
+       		name="adoption_story_title"
+       		type="list"
+       		label="Title"
+       		class="inputbox">
+       		<option value="What Led Us To Adoption" />
+       		<option value="Our Adoption Story" />
+       		<option value="What We Do For Fun" />
+       </field>
+
+       <field name="adoption_story" type="editor" buttons="true"
+                class="inputbox"
+                filter="safehtml"
+                label="What Led Us To Adoption / Our Adoption Story" />
+
+       <field name="adoption_story_image" type="file" class="inputbox"
+                 label="Adoption Image" />
+
+         <field
+                name="adopt_gender"
+                type="list"
+                label="COM_PROFILES_FORM_LBL_FAMILY_ADOPT_GENDER"
+                class="inputbox"
+                size="1"
+                default="No Preference">
+                <option value="No Preference">No Preference</option>
+                <option value="Boy">Boy</option>
+                <option value="Girl">Girl</option>
+            </field>
+
+         <field
+                name="adopt_race"
+                type="fixedboxes"
+                label="COM_PROFILES_FORM_LBL_FAMILY_ADOPT_RACE">
+                <option value="No Preference">No Preference</option>
+                <option value="Arabic">Arabic</option>
+                <option value="Asian">Asian</option>
+                <option value="African American">African American</option>
+                <option value="Caucasian">Caucasian</option>
+                <option value="Caucasian/Asian">Caucasian/Asian</option>
+                <option value="Caucasian/African American">Caucasian/African American</option>
+                <option value="Caucasian/Hispanic">Caucasian/Hispanic</option>
+                <option value="Caucasian/Native American">Caucasian/Native American</option>
+                <option value="European">European</option>
+                <option value="Eastern European/Slavic/Russian">Eastern European/Slavic/Russian</option>
+                <option value="Hispanic or South/Central American">Hispanic or South/Central American</option>
+                <option value="Jewish">Jewish</option>
+                <option value="Mediterranean">Mediterranean</option>
+                <option value="Multi-Racial">Multi-Racial</option>
+                <option value="Native American (American Indian)">Native American (American Indian)</option>
+                <option value="Pacific Islander">Pacific Islander</option>
+                <option value="Other">Other</option>
+            </field>
+
+       <field name="seo_title" type="text" size="40" class="inputbox"
+                 label="COM_PROFILES_FORM_LBL_FAMILY_SEO_TITLE"
+                 filter="safehtml" /> 
+
+       <field name="seo_keywords" type="text" size="40" class="inputbox"
+                 label="COM_PROFILES_FORM_LBL_FAMILY_SEO_KEYWORDS" 
+                 filter="safehtml" /> 
+
+       <field name="seo_description" type="textarea" rows="5" cols="35" class="inputbox"
+                 label="COM_PROFILES_FORM_LBL_FAMILY_SEO_DESCRIPTION"
+                 filter="safehtml" /> 
+
+         <field
+                name="state"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISHED_DESC"
+                class="inputbox"
+                size="1"
+                default="1">
+                <option value="1">JPUBLISHED</option>
+                <option value="0">JUNPUBLISHED</option>
+            </field>
+
+        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+		
+		<field name="my_occupation" type="text" size="40" class="inputbox" label="Occupation" required="false" />
+		<field name="spouse_occupation" type="text" size="40" class="inputbox" label="Occupation" required="false" />
+		
+		<field name="my_religion" type="text" size="40" class="inputbox" label="Religion" required="false" />
+		<field name="spouse_religion" type="text" size="40" class="inputbox" label="Religion" required="false" />
+		
+		<field name="my_education" type="text" size="40" class="inputbox" label="Education" required="false" />
+		<field name="spouse_education" type="text" size="40" class="inputbox" label="Education" required="false" />
+		
+		<field name="my_food" type="text" size="40" class="inputbox" label="Favorite Food" required="false" />
+		<field name="spouse_food" type="text" size="40" class="inputbox" label="Favorite Food" required="false" />
+		
+		<field name="my_hobby" type="text" size="40" class="inputbox" label="Favorite Hobby" required="false" />
+		<field name="spouse_hobby" type="text" size="40" class="inputbox" label="Favorite Hobby" required="false" />
+		
+		<field name="my_movie" type="text" size="40" class="inputbox" label="Favorite Movie" required="false" />
+		<field name="spouse_movie" type="text" size="40" class="inputbox" label="Favorite Movie" required="false" />
+				
+		<field name="my_sport" type="text" size="40" class="inputbox" label="Favorite Sport" required="false" />
+		<field name="spouse_sport" type="text" size="40" class="inputbox" label="Favorite Sport" required="false" />
+		
+		<field name="my_holiday" type="text" size="40" class="inputbox" label="Favorite Holiday" required="false" />
+		<field name="spouse_holiday" type="text" size="40" class="inputbox" label="Favorite Holiday" required="false" />
+		
+		<field name="my_music_group" type="text" size="40" class="inputbox" label="Favorite Music Group" required="false" />
+		<field name="spouse_music_group" type="text" size="40" class="inputbox" label="Favorite Music Group" required="false" />
+		
+		<field name="my_tv_show" type="text" size="40" class="inputbox" label="Favorite TV Show" required="false" />
+		<field name="spouse_tv_show" type="text" size="40" class="inputbox" label="Favorite TV Show" required="false" />
+		
+		<field name="my_book" type="text" size="40" class="inputbox" label="Favorite Book" required="false" />
+		<field name="spouse_book" type="text" size="40" class="inputbox" label="Favorite Book" required="false" />
+		
+		<field name="my_subject_in_school" type="text" size="40" class="inputbox" label="Favorite Subject in School" required="false" />
+		<field name="spouse_subject_in_school" type="text" size="40" class="inputbox" label="Favorite Subject in School" required="false" />
+		
+		<field name="my_memory_w_spouse" type="text" size="40" class="inputbox" label="Favorite Memory w/ Spouse" required="false" />
+		<field name="spouse_memory_w_spouse" type="text" size="40" class="inputbox" label="Favorite Memory w/ Spouse" required="false" />
+		
+		<field name="my_family_activity" type="text" size="40" class="inputbox" label="Favorite Family Activity" required="false" />
+		<field name="spouse_family_activity" type="text" size="40" class="inputbox" label="Favorite Family Activity" required="false" />
+		
+		<field name="my_childhood_memory" type="text" size="40" class="inputbox" label="Favorite Childhood Memory" required="false" />
+		<field name="spouse_childhood_memory" type="text" size="40" class="inputbox" label="Favorite Childhood Memory" required="false" />
+		
+		<field name="my_tradition" type="text" size="40" class="inputbox" label="Favorite Tradition" required="false" />
+		<field name="spouse_tradition" type="text" size="40" class="inputbox" label="Favorite Tradition" required="false" />
+		
+		<field name="my_childhood_toy" type="text" size="40" class="inputbox" label="Favorite Childhood Toy" required="false" />
+		<field name="spouse_childhood_toy" type="text" size="40" class="inputbox" label="Favorite Childhood Toy" required="false" />
+		
+		<field name="my_race" type="text" size="40" class="inputbox" label="Race" required="false" />
+		<field name="spouse_race" type="text" size="40" class="inputbox" label="Race" required="false" />
+		
+		<field name="my_animal" type="text" size="40" class="inputbox" label="Favorite Animal" required="false" />
+		<field name="spouse_animal" type="text" size="40" class="inputbox" label="Favorite Animal" required="false" />
+		
+		<field name="my_vacation_spot" type="text" size="40" class="inputbox" label="Dream Vacation" required="false" />
+		<field name="spouse_vacation_spot" type="text" size="40" class="inputbox" label="Dream Vacation" required="false" />
+
+	</fieldset>
+	<fieldset
+		name="filters">
+                 
+		<field
+			name="filter_profile_status"
+			type="list"
+			class="inputbox"
+			onchange="this.form.submit()">
+                <option value="">- Select Profile Status -</option>
+                <option value="0">COM_PROFILES_PROFILE_STATUS_0</option>
+                <option value="1">COM_PROFILES_PROFILE_STATUS_1</option>
+                <option value="2">COM_PROFILES_PROFILE_STATUS_2</option>
+            </field>
+		
+	</fieldset>
+</form>

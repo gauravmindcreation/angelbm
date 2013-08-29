@@ -1,0 +1,116 @@
+body.contentpane {
+	margin:0;
+	padding:0;
+	background:url(/templates/beez_20/images/body_bg.png) repeat 0 0 scroll;
+}
+html body #all {
+	margin:72px auto;
+	width:595px;
+	height:595px;
+	box-shadow: 0 0 10px #a9a9a9;
+	position: relative;
+	background-color:#FFF;
+}
+html body #all #header {
+	background:url(../img/contact_head.png);
+	width:150px;
+	height:59px;
+	position: absolute;
+	top:-50px;
+	margin-left:-75px;
+	left:50%;
+	padding:0;
+}
+html body #all #contact_form h1 {
+	font-size:28px;
+	font-weight:normal;
+	color:#45261d;
+	text-align:center;
+	padding-bottom:35px;
+	background:url(/templates/beez_20/images/hr.png) no-repeat scroll center bottom transparent;
+	font-family: "Minion Pro", Times, serif;
+	text-transform: uppercase;
+	border-bottom: none;
+}
+*{font-size:13px}
+h1{font-size:24px;color:#DD6BA5}
+#contact_form {
+	padding:0 20px 20px 20px;
+}
+#contact_form li {
+	padding:5px 0;
+}
+#main #contact_form ul {
+	list-style-type: none;
+	padding:0
+}
+#contact_form #submit {
+	background:url(../img/contact_this_family.png) no-repeat scroll 0 0 transparent;
+	width:219px;
+	height:37px;
+	display:inline-block;
+	margin-top:20px;
+}
+.form_wrapper.left .left {
+    width: 50%;
+}
+.form_wrapper input, .form_wrapper select, .form_wrapper textarea {
+    border: medium none;
+    color: #666666;
+    margin: 0;
+}
+.form_description {
+    color: #0066CC;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0 10px;
+    width: 305px;
+}
+.form_wrapper input {
+    color: #666666;
+}
+.form_wrapper label {
+    display: block;
+}
+.form_wrapper input, .form_wrapper select, .form_wrapper textarea {
+    background: -moz-linear-gradient(center top , #FFFFFF 0pt, #F0F0F0 100%) repeat scroll 0 0 transparent;
+    border: 1px solid #ADD6FF;
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px;
+}
+.form_wrapper input[type="submit"], .form_wrapper input[type="image"] {
+    background: none repeat scroll 0 0 transparent;
+    border: medium none;
+    padding: 0;
+}
+.form_wrapper #request_inquiry {
+    width: 345px;
+}
+.form_wrapper input[type="text"] {
+    width: 545px;
+}
+.form_wrapper #city, .form_wrapper #mother_race, .form_wrapper #father_race {
+    width: 245px;
+}
+.form_wrapper #state {
+    width: 100px;
+}
+.form_wrapper #zip {
+    width: 100px;
+}
+.form_wrapper #datepicker {
+    width: 175px;
+}
+.form_wrapper #age {
+    width: 100px;
+}
+.form_wrapper textarea {
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    height: 128px;
+    width: 545px;
+}
+#spmck {
+    display: none;
+}

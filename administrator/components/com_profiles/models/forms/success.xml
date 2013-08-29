@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+                    readonly="true" class="readonly"
+                    description="JGLOBAL_FIELD_ID_DESC" />
+
+       <field name="first_name" type="text" size="40" class="inputbox"
+                 label="COM_PROFILES_SUCCESSES_FIRST_NAME"
+                 filter="safehtml" /> 
+
+       <field name="spouse_name" type="text" size="40" class="inputbox"
+                 label="COM_PROFILES_SUCCESSES_SPOUSE_NAME"
+                 filter="safehtml" /> 
+
+       <field name="last_name" type="text" size="40" class="inputbox"
+                 label="COM_PROFILES_SUCCESSES_LAST_NAME"
+                 filter="safehtml" /> 
+
+       <field name="success_story" type="editor" buttons="true"
+                class="inputbox"
+                filter="safehtml"
+                label="COM_PROFILES_TITLE_SUCCESSES" /> 
+
+       <field name="success_story_image" type="file" class="inputbox"
+                 label="Success Story Image" description="Success Story Image" />
+
+       <field name="seo_title" type="text" size="40" class="inputbox"
+                 label="COM_PROFILES_SUCCESSES_SEO_TITLE"
+                 filter="safehtml" /> 
+
+       <field name="seo_keywords" type="text" size="40" class="inputbox"
+                 label="COM_PROFILES_SUCCESSES_SEO_KEYWORDS"
+                 filter="safehtml" /> 
+
+       <field name="seo_description" type="textarea" rows="5" cols="35" class="inputbox"
+                 label="COM_PROFILES_SUCCESSES_SEO_DESCRIPTION"
+                 filter="safehtml" /> 
+
+         <field
+                name="state"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISHED_DESC"
+                class="inputbox"
+                size="1"
+                default="1">
+                <option value="1">JPUBLISHED</option>
+                <option value="0">JUNPUBLISHED</option>
+            </field>
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+                <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

@@ -1,0 +1,10 @@
+/logs/*
+/tmp/*
+/cgi-bin
+/joomla.xml
+LICENSE.txt
+README.txt
+robots.txt.dst
+web.config.txt
+/installation
+/configuration.php
