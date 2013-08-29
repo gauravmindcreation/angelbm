@@ -91,38 +91,23 @@ $css = <<<CSS
 
 #profiles-list .item img {
 	width:94%;
-}
-#profiles-list .text-center .icon {
-	font-size:26px;
-	color:#fc8d21;
-	text-decoration: none;
-}
-#profiles-list h3 {
-	background:#dff2f9;
-	margin:0;
-	padding:12px 0;
-	text-indent:10px;
-    border: 1px solid #E3E3E3;
-    border-bottom:none;
-    border-radius: 4px 4px 0 0;
+	padding:3%;
+	background:#fff;
+	border-radius:0;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
-}
-#profiles-list h3 span {
-	color:#6ccae2;
 }
 #profiles-list h3 a {
 	font-weight:normal;
 	color:#63174D;
 }
 #profiles-list .item .item-block {
-    background-color: #FFF;
+    background-color: #fdf7fc;
     border: 1px solid #E3E3E3;
-    border-radius: 0 0 4px 4px;
+    border-radius: 4px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
     margin-bottom: 20px;
     min-height: 20px;
-    padding: 10px 19px 19px 19px;
-    border-top:none;
+    padding: 20px;
 }
 #profiles-list .text-center > span {
 	color:#63174D;
@@ -158,13 +143,15 @@ foreach($this->families as $family) :
 	$link = JRoute::_('index.php?option=com_profiles&view=profile&id='.$family->id);
 	?>
 	<div class="span4 item">
-		<h3><span class="icon icon-heart muted"></span>&nbsp;<a href="<?php echo $link; ?>"><?php echo $fullname; ?></a></h3>
 		<div class="item-block">
 			<?php
 			echo '<a href="'.$link.'">';
 			echo '<img class="thumbnail" src="http://www.angeladoptioninc.com/uploads/profiles/'.$family->id.'/'.$main_image.'" alt="'.$family->last_name.' Family" />';
 			echo '</a>';
 			?>
+			<h3 class="text-center">
+				<a href="<?php echo $link; ?>"><?php echo $fullname; ?></a>
+			</h3>
 			<div class="text-center">
 				<span>FAMILY TYPE: <span class="muted">Married</span></span><br />
 				<span>LOCATION: <span class="muted">Illinois</span></span>

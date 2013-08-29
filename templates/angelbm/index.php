@@ -111,6 +111,7 @@ else
 	. ($itemid ? ' itemid-' . $itemid : '')
 	. ($params->get('fluidContainer') ? ' fluid' : '');
 ?>">
+<div class="container">
 	<!-- Header -->
 	<header class="header" role="banner">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">
@@ -167,10 +168,11 @@ else
 		<jdoc:include type="modules" name="footer" style="none" />
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">
 			<hr />
-			<p class="pull-right"><a href="#top" id="back-top"><?php echo JText::_('TPL_GIVE_BACKTOTOP'); ?></a></p>
+			<p class="pull-right"><a href="#top" id="back-top"><?php echo JText::_('TPL_ANGELBM_BACKTOTOP'); ?></a></p>
 			<p>&copy; <?php echo $sitename; ?> <?php echo date('Y');?></p>
 		</div>
 	</footer>
-	<jdoc:include type="modules" name="debug" style="none" />
+</div>
+<jdoc:include type="modules" name="debug" style="none" />
 </body>
 </html>
