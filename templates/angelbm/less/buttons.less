@@ -226,3 +226,23 @@ input[type="submit"].btn {
   color: @grayDark;
   text-decoration: none;
 }
+
+
+.btn.btn-primary {
+  position: relative;
+}
+.btn.btn-primary:before,
+.btn.btn-primary:after {
+  content: " ";
+  display:block;
+  background:#fbd5eb;
+  height:16px;
+  width:16px;
+  position:absolute;
+  left:-17px;
+  top:5px;
+}
+.btn.btn-primary:after {
+  left:auto;
+  right:-17px;
+}

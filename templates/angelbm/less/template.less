@@ -11,7 +11,7 @@
 @import "../../../media/jui/less/layouts.less";
 
 // Base CSS
-@import "../../../media/jui/less/type.less";
+@import "type.less";
 @import "../../../media/jui/less/code.less";
 @import "../../../media/jui/less/forms.less";
 @import "../../../media/jui/less/tables.less";
@@ -29,8 +29,8 @@
 @import "../../../media/jui/less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
 
 // Components: Nav
-@import "../../../media/jui/less/navs.less";
-@import "../../../media/jui/less/navbar.less";
+@import "navs.less";
+@import "navbar.less";
 @import "../../../media/jui/less/breadcrumbs.less";
 @import "../../../media/jui/less/pagination.less";
 @import "../../../media/jui/less/pager.less";
@@ -95,9 +95,15 @@ body.site{
 body.site > .container {
 	padding-top:10px;
 	border-top:15px solid #ac2072;
-	width:1000px;
 	background-color:#fff;
 }
+@media (min-width: 979px) {
+	body.site > .container {
+		width:1000px;
+		max-width:1000px;
+	}
+}
+
 .thumbnail {
 	margin-bottom:9px;
 }
@@ -120,6 +126,12 @@ body.site > .container {
 	background-size:100% 100%;
 	background-image:url(../img/logo.svg);
 }
+@media (max-width: 767px) {
+	.brand {
+		margin:auto;
+	}
+}
+
 /* Header */
 .header{
 	margin-bottom: 10px;
@@ -474,6 +486,7 @@ h6 { font-size: 12px; line-height: 14px; }
 		width: 62px;
 	}
 }
+
 // Page break
 dl.tabs {
 	float: left;
@@ -540,59 +553,101 @@ div.current dd.tabs {
 #myCarousel {
 	margin-bottom:0;
 }
-.module-orange-bg {
-	background-color:#fc8d21;
+
+/* Module Styling / Chrome */
+[class|=module] {
+	padding:15px 0;
 	margin-bottom:15px;
-}
-.module-orange-bg h1 {
-	font-weight:100;
-	font-size:40px;
-	color:#FFF;
-}
-.module-orange-bg p {
-	color:#631757;
-	font-weight:bold;
-	margin:25px 0;
-	font-size:14px
+
+	h3 {
+		font-weight:100;
+		font-size:34px;
+		color:#FFF;
+	}
+
+	p {
+		color:#ffd480;
+		font-weight:normal;
+		font-size:14px
+	}
 }
 .module-pink-bg {
-	padding:15px 0;
 	background-color:#ac2072;
-	margin-bottom:15px;
-}
-.module-pink-bg h3 {
-	font-weight:100;
-	font-size:34px;
-	color:#FFF;
-}
-.module-pink-bg p {
-	color:#ffd480;
-	font-weight:normal;
-	font-size:14px
 }
 .module-purple-bg {
-	padding:15px 0;
 	background-color:#631757;
-	margin-bottom:15px;
 }
-.module-purple-bg h3 {
-	font-weight:100;
-	font-size:34px;
-	color:#FFF;
-}
-.module-purple-bg p {
-	color:#ffd480;
-	font-weight:normal;
-	font-size:14px
-}
-.custom.family-search-box .container {
-	background:url(../images/family-search-box.png) no-repeat left 12px scroll transparent;
-	min-height:200px;
+.module-hearts-bg {
+	background-color:#FFF;
+	background-image:url(../img/banner_bg.png);
+	background-repeat:0;
+	border-bottom:1px solid #fbd5eb;
 }
 
-.cursive {
-	font-family:"Sacramento", cursive;
+.styled-select {
+	position: relative;
+	border-radius: 3px;
+	background-clip: padding-box;
+	display:inline-block;
+	box-shadow: 0 1px 4px rgba(0,0,0,.30), inset 0 1px 0 #fff;
+	background: #fcfcfc;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjZmNmYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUzJSIgc3RvcC1jb2xvcj0iI2ZjZmNmYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc2JSIgc3RvcC1jb2xvcj0iI2YxZjFmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMmUyZTIiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #fcfcfc 0%, #fcfcfc 53%, #f1f1f1 76%, #e2e2e2 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(53%,#fcfcfc), color-stop(76%,#f1f1f1), color-stop(100%,#e2e2e2));
+	background: -webkit-linear-gradient(top, #fcfcfc 0%,#fcfcfc 53%,#f1f1f1 76%,#e2e2e2 100%);
+	background: -o-linear-gradient(top, #fcfcfc 0%,#fcfcfc 53%,#f1f1f1 76%,#e2e2e2 100%);
+	background: -ms-linear-gradient(top, #fcfcfc 0%,#fcfcfc 53%,#f1f1f1 76%,#e2e2e2 100%);
+	background: linear-gradient(to bottom, #fcfcfc 0%,#fcfcfc 53%,#f1f1f1 76%,#e2e2e2 100%);
+
+	select {
+		float: left;
+		position: relative;
+		z-index: 2;
+		height: 30px;
+		display: block;
+		line-height: 14px;
+		padding: 5px 25px 4px 5px;
+		margin: 0;
+		outline:none;
+		-moz-appearance: window;
+		-moz-padding-end: 19px;
+		background: transparent;
+		background-color: transparent;
+		border: none;
+		-webkit-appearance: none;
+		appearance: none;
+		color:#000;
+		color:rgba(0,0,0,0);
+		text-shadow:0 0 0 #000;
+	}
+
+	span {
+		display: block;
+		height: 20px;
+		position: absolute;
+		right: 10px;
+		top: 5px;
+		width: 10px;
+		padding-left:10px;
+		border-left:1px solid #dadada;
+		background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAGCAYAAAAVMmT4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGlJREFUeNpinDNnThoDBJyFYmSgBMQuUPYeJiDxHog7gHgVVBIZzIRiQSC+B1K8GojDoAK7kTSsgppaAcSdIAEmmBVIGkAmlQNxKLJCEGBBshKkIR1qojG6QnTFDFAnKUPZ99DkGAACDABZXBV+fHwrZwAAAABJRU5ErkJggg==);
+		background-repeat:no-repeat;
+		background-position:right center;
+	}
 }
-.cursive2 {
-	font-family:"Clicker Script", cursive;
+.find-a-family {
+	&.custom {
+		padding:20px 20px 0 20px;
+	}
+
+	.row {
+		padding-bottom:20px;
+	}
+
+	h2 {
+		font-weight:normal;
+		font-size:40px;
+		color:#AC2072;
+		padding:10px 20px;
+	}
 }

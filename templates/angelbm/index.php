@@ -102,6 +102,11 @@ else
 	<!--[if lt IE 9]>
 		<script src="<?php echo $this->baseurl ?>/media/jui/js/html5.js"></script>
 	<![endif]-->
+	<!--[if lte IE 9]>
+		<style type="text/css">
+			select {color:#000}
+		</style>
+	<![endif]-->
 </head>
 
 <body class="site <?php echo $option
@@ -112,16 +117,25 @@ else
 	. ($params->get('fluidContainer') ? ' fluid' : '');
 ?>">
 <div class="container">
+	<div class="navbar visible-phone">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+		</div>
+	</div>
 	<!-- Header -->
 	<header class="header" role="banner">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">
 			<div class="header-inner clearfix">
-				<a class="brand pull-left" href="<?php echo $this->baseurl; ?>">
-					<?php echo $logo;?> <?php if ($this->params->get('sitedescription')) { echo '<div class="site-description">'. htmlspecialchars($this->params->get('sitedescription')) .'</div>'; } ?>
-				</a>
 				<div class="header-search pull-right">
 					<jdoc:include type="modules" name="position-0" style="none" />
 				</div>
+				<a class="brand pull-left" href="<?php echo $this->baseurl; ?>">
+					<?php echo $logo;?> <?php if ($this->params->get('sitedescription')) { echo '<div class="site-description">'. htmlspecialchars($this->params->get('sitedescription')) .'</div>'; } ?>
+				</a>
 			</div>
 		</div>
 	</header>
@@ -133,7 +147,11 @@ else
 	</nav>
 	<?php endif; ?>
 	<?php if ($this->countModules('banner')) : ?>
-	<jdoc:include type="modules" name="banner" style="xhtml" />
+	<div id="banner">
+		<hr class="stripe">
+		<jdoc:include type="modules" name="banner" style="xhtml" />
+		<hr class="stripe">
+	</div>
 	<?php endif; ?>
 	<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">
 		<div class="row<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">

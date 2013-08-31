@@ -111,24 +111,6 @@ $css = <<<CSS
 #profiles-list .text-center > span {
 	color:#63174D;
 }
-#profiles-list .btn {
-	position: relative;
-}
-#profiles-list .btn:before,
-#profiles-list .btn:after {
-	content: " ";
-	display:block;
-	background:#fbd5eb;
-	height:16px;
-	width:16px;
-	position:absolute;
-	left:-17px;
-	top:5px;
-}
-#profiles-list .btn:after {
-	left:auto;
-	right:-17px;
-}
 
 CSS;
 
