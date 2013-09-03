@@ -2232,7 +2232,7 @@ button.close {
   /* IE7 inline-block hack */
 
   *zoom: 1;
-  padding: 9px 14px;
+  padding: 9px 12px;
   margin-bottom: 0;
   font-size: 13px;
   line-height: 18px;
