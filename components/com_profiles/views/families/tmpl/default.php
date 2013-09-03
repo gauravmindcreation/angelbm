@@ -35,6 +35,7 @@ jQuery(document).ready(function($){
 
 		profileList.infinitescroll({
 			debug:true,
+			appendCallback: false,
 			navSelector: '.pagination',
 			nextSelector: '#main-nav [title="Next"]',
 			itemSelector: '#profiles-list .item',
@@ -44,11 +45,15 @@ jQuery(document).ready(function($){
 				return "/waiting-families?start=" + start;
 			},
 			loading: {
-				msgText: "Loading more families...",
-				finishedMsg: "<p>No more families found!</p>"
+				start: function (opts) {
+					$(opts.contentSelector).infinitescroll('beginAjax', opts);
+				},
+				finished: function () {
+					return false;
+				}
 			}
 		},
-		function (elements) {
+		function (elements, opts) {
 			var newElements = $(elements);
 
 			newElements.imagesLoaded(function () {
@@ -57,7 +62,11 @@ jQuery(document).ready(function($){
 					$('#loadMore').html('Load More');
 
 					if (notPhone) {
-						profileList.masonry('appended', newElements);
+						profileList.append(newElements)
+							.masonry('appended', newElements)
+							.masonry();
+					} else {
+						profileList.append(newElements);
 					}
 				}, 1000);
 			});
