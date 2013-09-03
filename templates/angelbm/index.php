@@ -137,8 +137,8 @@ else
 	<?php endif; ?>
 	<?php if ($this->countModules('banner')) : ?>
 	<div id="banner">
-		<jdoc:include type="modules" name="banner" style="xhtml" />
 		<hr class="stripe">
+		<jdoc:include type="modules" name="banner" style="xhtml" />
 	</div>
 	<?php endif; ?>
 	<hr class="stripe">
