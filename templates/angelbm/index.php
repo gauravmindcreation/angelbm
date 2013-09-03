@@ -137,11 +137,11 @@ else
 	<?php endif; ?>
 	<?php if ($this->countModules('banner')) : ?>
 	<div id="banner">
-		<hr class="stripe">
 		<jdoc:include type="modules" name="banner" style="xhtml" />
 		<hr class="stripe">
 	</div>
 	<?php endif; ?>
+	<hr class="stripe">
 	<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">
 		<div class="row<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">
 			<?php if ($this->countModules('position-8')) : ?>
@@ -171,11 +171,10 @@ else
 		</div>
 	</div>
 	<!-- Footer -->
-	<footer class="footer" role="contentinfo">
+	<footer class="footer module-pink-bg" role="contentinfo">
 		<jdoc:include type="modules" name="footer" style="none" />
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">
-			<hr />
-			<p class="pull-right"><a href="#top" id="back-top"><?php echo JText::_('TPL_ANGELBM_BACKTOTOP'); ?></a></p>
+			<p class="pull-right"><a href="#top" id="back-top">back to top</a></p>
 			<p>&copy; <?php echo $sitename; ?> <?php echo date('Y');?></p>
 		</div>
 	</footer>
