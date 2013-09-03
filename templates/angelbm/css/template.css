@@ -8617,6 +8617,7 @@ div.current dd.tabs {
 }
 .styled-select {
   position: relative;
+  overflow: hidden;
   border-radius: 3px;
   background-clip: padding-box;
   display: inline-block;
@@ -8641,24 +8642,24 @@ div.current dd.tabs {
   margin: 0;
   outline: none;
   -moz-appearance: window;
-  -moz-padding-end: 19px;
+  -webkit-appearance: none;
+  appearance: none;
   background: transparent;
   background-color: transparent;
   border: none;
-  -webkit-appearance: none;
-  appearance: none;
   color: #000;
   color: rgba(0, 0, 0, 0);
   text-shadow: 0 0 0 #000;
+  width: 125%;
 }
 .styled-select span {
   display: block;
   height: 20px;
   position: absolute;
-  right: 10px;
+  right: 7px;
+  padding-left: 7px;
   top: 5px;
   width: 10px;
-  padding-left: 10px;
   border-left: 1px solid #dadada;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAGCAYAAAAVMmT4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAGlJREFUeNpinDNnThoDBJyFYmSgBMQuUPYeJiDxHog7gHgVVBIZzIRiQSC+B1K8GojDoAK7kTSsgppaAcSdIAEmmBVIGkAmlQNxKLJCEGBBshKkIR1qojG6QnTFDFAnKUPZ99DkGAACDABZXBV+fHwrZwAAAABJRU5ErkJggg==);
   background-repeat: no-repeat;
