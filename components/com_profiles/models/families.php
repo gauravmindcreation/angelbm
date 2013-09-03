@@ -71,6 +71,12 @@ class ProfilesModelFamilies extends JModelList
 		$search = $app->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
 		$this->setState('filter.search', $search);
 
+		$familyType = $app->getUserStateFromRequest('filter.family_type', 'filter_family_type');
+		$this->setState('filter.family_type', $familyType);
+
+		$familyReligion = $app->getUserStateFromRequest('filter.family_religion', 'filter_family_religion');
+		$this->setState('filter.family_religion', $familyReligion);
+
 		// Load the parameters.
 		$params = JComponentHelper::getParams('com_profiles');
 		$this->setState('params', $params);
@@ -199,6 +205,25 @@ class ProfilesModelFamilies extends JModelList
 				$search = $db->quote('%' . $db->getEscaped($search, true) . '%');
 				$q->where('(a.first_name LIKE ' . $search . '  OR  a.spouse_name LIKE ' . $search . '  OR  a.last_name LIKE ' . $search . ')');
 			}
+		}
+
+		$familyType = $this->getState('filter.family_type');
+		switch ($familyType)
+		{
+			case 'single':
+				$q->where("a.spouse_name > ''");
+				break;
+			case 'married':
+				$q->where("a.spouse_name <> ''");
+				break;
+		}
+
+		$familyReligion = $this->getState('filter.family_religion');
+		if (!empty($familyReligion))
+		{
+			$religion = $db->escape($familyReligion);
+
+			//$q->where("(a.my_religion LIKE '%{$religion}%' OR a.spouse_religion LIKE '%{$religion}%')");
 		}
 
 		return $q;
