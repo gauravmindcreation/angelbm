@@ -747,7 +747,7 @@ hr {
   margin: 18px 0;
   background-image: linear-gradient(90deg, #d7d4d9 20%, transparent 20%, transparent);
   background-repeat: repeat;
-  background-size: 6px;
+  background-size: 6px 6px;
   height: 6px;
   border: none;
 }
@@ -8685,8 +8685,16 @@ div.current dd.tabs {
 .find-a-family h2 {
   font-weight: normal;
   font-size: 40px;
+  line-height: 40px;
   color: #AC2072;
-  padding: 10px 20px;
+  padding-left: 20px;
+  margin-top: 0;
+}
+.find-a-family p {
+  width: 595px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 10px;
 }
 .custom-contact {
   font-size: 34px;
