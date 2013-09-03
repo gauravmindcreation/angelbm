@@ -13,7 +13,7 @@
 // Base CSS
 @import "type.less";
 @import "../../../media/jui/less/code.less";
-@import "../../../media/jui/less/forms.less";
+@import "forms.less";
 @import "../../../media/jui/less/tables.less";
 
 // Components: common
@@ -125,6 +125,14 @@ body.site > .container {
 	height:120px;
 	background-size:100% 100%;
 	background-image:url(../img/logo.svg);
+}
+@media (max-width: 979px) and (min-width: 768px) {
+	.brand {
+		width:220px;
+		height:100px;
+		margin-top:15px;
+		margin-left:10px;
+	}
 }
 @media (max-width: 767px) {
 	.brand {
@@ -652,4 +660,28 @@ div.current dd.tabs {
 		color:#AC2072;
 		padding:10px 20px;
 	}
+}
+.custom-contact {
+	font-size:34px;
+	color:#AC2072;
+	font-family:'Rosarivo',sans-serif;
+	padding:24px 0;
+
+	span {
+		.italic();
+	}
+
+	small {
+		font-size:20px;
+		color:#584b62;
+	}
+}
+.header ul {
+	margin-bottom:0;
+}
+.italic {
+	font-style:italic;
+}
+.script {
+	font-family:'Rosarivo';
 }

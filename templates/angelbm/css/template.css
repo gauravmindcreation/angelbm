@@ -197,7 +197,7 @@ textarea {
 .input-block-level {
   display: block;
   width: 100%;
-  min-height: 28px;
+  min-height: 38px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -350,7 +350,7 @@ a:focus {
 .row-fluid [class*="span"] {
   display: block;
   width: 100%;
-  min-height: 28px;
+  min-height: 38px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -917,11 +917,11 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   display: inline-block;
-  height: 18px;
-  padding: 4px 6px;
+  padding: 9px 6px;
   margin-bottom: 9px;
   font-size: 13px;
-  line-height: 18px;
+  height: 38px;
+  line-height: 38px;
   color: #555555;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -1009,13 +1009,13 @@ input[type="checkbox"] {
 }
 select,
 input[type="file"] {
-  height: 28px;
+  height: 38px;
   /* In IE7, the height of the select element cannot be changed by height, only font-size */
 
   *margin-top: 4px;
   /* For IE7, add top margin to align select with labels */
 
-  line-height: 28px;
+  line-height: 38px;
 }
 select {
   width: 220px;
@@ -2232,7 +2232,7 @@ button.close {
   /* IE7 inline-block hack */
 
   *zoom: 1;
-  padding: 4px 12px;
+  padding: 9px 14px;
   margin-bottom: 0;
   font-size: 13px;
   line-height: 18px;
@@ -2258,6 +2258,8 @@ button.close {
   border: 1px solid #bbbbbb;
   *border: 0;
   border-bottom-color: #a2a2a2;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
   *margin-left: .3em;
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
@@ -2502,17 +2504,17 @@ input[type="button"].btn-block {
 .btn-info {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #745285;
-  background-image: -moz-linear-gradient(top, #715285, #7a5285);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#715285), to(#7a5285));
-  background-image: -webkit-linear-gradient(top, #715285, #7a5285);
-  background-image: -o-linear-gradient(top, #715285, #7a5285);
-  background-image: linear-gradient(to bottom, #715285, #7a5285);
+  background-color: #664a78;
+  background-image: -moz-linear-gradient(top, #715285, #563f65);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#715285), to(#563f65));
+  background-image: -webkit-linear-gradient(top, #715285, #563f65);
+  background-image: -o-linear-gradient(top, #715285, #563f65);
+  background-image: linear-gradient(to bottom, #715285, #563f65);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff715285', endColorstr='#ff7a5285', GradientType=0);
-  border-color: #7a5285 #7a5285 #4e3556;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff715285', endColorstr='#ff563f65', GradientType=0);
+  border-color: #563f65 #563f65 #2e2136;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #7a5285;
+  *background-color: #563f65;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -2524,12 +2526,12 @@ input[type="button"].btn-block {
 .btn-info.disabled,
 .btn-info[disabled] {
   color: #ffffff;
-  background-color: #7a5285;
-  *background-color: #6b4875;
+  background-color: #563f65;
+  *background-color: #493556;
 }
 .btn-info:active,
 .btn-info.active {
-  background-color: #5d3f65 \9;
+  background-color: #3b2b46 \9;
 }
 .btn-inverse {
   color: #ffffff;
@@ -2624,15 +2626,15 @@ input[type="submit"].btn.btn-mini {
   content: " ";
   display: block;
   background: #fbd5eb;
-  height: 16px;
-  width: 16px;
+  height: 18px;
+  width: 18px;
   position: absolute;
-  left: -17px;
-  top: 5px;
+  left: -19px;
+  top: 10px;
 }
 .btn.btn-primary:after {
   left: auto;
-  right: -17px;
+  right: -19px;
 }
 .btn-group {
   position: relative;
@@ -2778,7 +2780,7 @@ input[type="submit"].btn.btn-mini {
   background-color: #51a351;
 }
 .btn-group.open .btn-info.dropdown-toggle {
-  background-color: #7a5285;
+  background-color: #563f65;
 }
 .btn-group.open .btn-inverse.dropdown-toggle {
   background-color: #222222;
@@ -2998,8 +3000,8 @@ input[type="submit"].btn.btn-mini {
 }
 .nav-tabs > li > a,
 .nav-pills > li > a {
-  padding-right: 12px;
-  padding-left: 12px;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-right: 2px;
   line-height: 14px;
 }
@@ -4868,7 +4870,7 @@ a.badge:focus {
   .uneditable-input {
     display: block;
     width: 100%;
-    min-height: 28px;
+    min-height: 38px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -5043,7 +5045,7 @@ a.badge:focus {
   .row-fluid [class*="span"] {
     display: block;
     width: 100%;
-    min-height: 28px;
+    min-height: 38px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -5383,7 +5385,7 @@ a.badge:focus {
   .row-fluid [class*="span"] {
     display: block;
     width: 100%;
-    min-height: 28px;
+    min-height: 38px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -8142,6 +8144,14 @@ body.site > .container {
   background-size: 100% 100%;
   background-image: url(../img/logo.svg);
 }
+@media (max-width: 979px) and (min-width: 768px) {
+  .brand {
+    width: 220px;
+    height: 100px;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+}
 @media (max-width: 767px) {
   .brand {
     margin: auto;
@@ -8677,4 +8687,26 @@ div.current dd.tabs {
   font-size: 40px;
   color: #AC2072;
   padding: 10px 20px;
+}
+.custom-contact {
+  font-size: 34px;
+  color: #AC2072;
+  font-family: 'Rosarivo', sans-serif;
+  padding: 24px 0;
+}
+.custom-contact span {
+  font-style: italic;
+}
+.custom-contact small {
+  font-size: 20px;
+  color: #584b62;
+}
+.header ul {
+  margin-bottom: 0;
+}
+.italic {
+  font-style: italic;
+}
+.script {
+  font-family: 'Rosarivo';
 }

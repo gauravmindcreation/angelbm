@@ -9,10 +9,11 @@
 
 defined('_JEXEC') or die;
 
-// Getting params from template
-$params = JFactory::getApplication()->getTemplate(true)->params;
-
+// Get the application object
 $app = JFactory::getApplication();
+
+// Getting params from template
+$params = $app->getTemplate(true)->params;
 
 $this->setBase($this->baseurl);
 
@@ -42,9 +43,6 @@ $this->addStyleSheet('templates/'.$this->template.'/css/template.css');
 
 // Load optional RTL Bootstrap CSS
 JHtml::_('bootstrap.loadCss', false, $this->direction);
-
-// Add current user information
-$user = JFactory::getUser();
 
 // Adjusting content width
 if ($this->countModules('position-7') && $this->countModules('position-8'))
@@ -85,27 +83,18 @@ else
 	<jdoc:include type="head" />
 	<?php
 	// Use of Google Font
-	if ($this->params->get('googleFont'))
-	{
+	if ($this->params->get('googleFont')) :
 		$fullName = $this->params->get('googleFontName');
-		list($fontFamily, $sizes) = explode(':', $fullName);
-	?>
+		list($fontFamily, $sizes) = explode(':', $fullName); ?>
 		<link href='http://fonts.googleapis.com/css?family=<?php echo $fullName; ?>' rel='stylesheet' type='text/css' />
 		<style type="text/css">
 			h1,h2,h3,h4,h5,h6,.site-title{
 				font-family: '<?php echo str_replace('+', ' ', $fontFamily);?>', sans-serif;
 			}
 		</style>
-	<?php
-	}
-	?>
+	<?php endif; ?>
 	<!--[if lt IE 9]>
 		<script src="<?php echo $this->baseurl ?>/media/jui/js/html5.js"></script>
-	<![endif]-->
-	<!--[if lte IE 9]>
-		<style type="text/css">
-			select {color:#000}
-		</style>
 	<![endif]-->
 </head>
 
