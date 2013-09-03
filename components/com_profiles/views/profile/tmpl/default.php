@@ -61,9 +61,11 @@ elseif(strpos($family->video, 'vimeo'))
 ?>
 <div id="user_profile">
 	<?php if(JRequest::getVar('tmpl') !== 'component'): ?>
-	<a href="<?php echo JRoute::_('index.php?option=com_profiles'); ?>">&laquo; back to waiting families</a><br />
+	<a href="<?php echo JRoute::_('index.php?option=com_profiles'); ?>">&laquo; back to waiting families</a>
+	<br />
+	<br />
 	<?php endif; ?>
-		<div class="row">
+	<div class="row">
 		<div class="span6">
 			<img class="main-photo" alt="<?php echo $fullname; ?>" src="http://www.angeladoptioninc.com<?php echo $img_path.$main_image; ?>" />
 		</div>
@@ -75,12 +77,12 @@ elseif(strpos($family->video, 'vimeo'))
 			{
 				$races = implode(', ', json_decode($family->adopt_race, true));
 				echo '<h5>RACE OF CHILD INTERESTED IN ADOPTING:</h5>';
-				echo '<p><span>Race of child interested in adopting:</span>'.$races.'</p>';
+				echo '<p><span>Race of child interested in adopting:</span> '.$races.'</p>';
 			}
 			if (isset($family->adopt_gender))
 			{
 				echo '<h5>PREFERRED GENDER:</h5>';
-				echo '<p><span>Gender of child interested in adopting:</span>'.$family->adopt_gender.'</p>';
+				echo '<p><span>Gender of child interested in adopting:</span> '.$family->adopt_gender.'</p>';
 			}
 			?>
 			<div class="buttons">
@@ -90,9 +92,10 @@ elseif(strpos($family->video, 'vimeo'))
 			</div>
 		</div>
 	</div>
+	<hr />
 	<div id="sections">
 		<?php if($family->dear_birthmother): ?>
-		<div class="row" id="dear_birthmother">
+		<div id="dear_birthmother">
 			<h3>Dear Birthmother,</h3>
 			<?php
 			echo '<p>'.format_profile_text($family->dear_birthmother).'</p>';
@@ -215,5 +218,6 @@ elseif(strpos($family->video, 'vimeo'))
 			</div>
 			<?php endif; ?>
 		</div>
+		<br />
 	</div>
 </div>
