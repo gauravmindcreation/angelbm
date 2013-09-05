@@ -109,7 +109,7 @@ $css = <<<CSS
 	border-radius:0;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
-#profiles-list h2 a {
+#profiles-list h3 a {
 	font-weight:normal;
 	text-transform: uppercase;
 }
@@ -162,9 +162,9 @@ foreach($this->families as $family) :
 			echo '<img class="thumbnail" src="http://www.angeladoptioninc.com/uploads/profiles/'.$family->id.'/'.$main_image.'" alt="'.$family->last_name.' Family" />';
 			echo '</a>';
 			?>
-			<h2 class="text-center">
+			<h3 class="text-center">
 				<a href="<?php echo $link; ?>"><?php echo $fullname; ?></a>
-			</h2>
+			</h3>
 			<div class="text-center">
 				<span>FAMILY TYPE: <span class="muted"><?php echo ProfilesHelper::familyType(); ?></span></span><br />
 				<span>RELIGION: <span class="muted">Illinois</span></span>
