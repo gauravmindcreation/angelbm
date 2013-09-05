@@ -11,12 +11,14 @@
 // -------------------------
 @black:                 #000;
 @grayDarker:            #222;
-@grayDark:              #333;
+@grayDark:              #584B62;
 @gray:                  #555;
 @grayLight:             #999;
 @grayLighter:           #eee;
 @white:                 #fff;
-
+@pink:					#f5ddea;
+@pinkLighter:			lighten(@pink, 30%);
+@pinkDarker:			darken(@pink, 30%);
 
 // Accent colors
 // -------------------------
@@ -67,6 +69,7 @@
 // Based on 14px font-size and 20px line-height
 
 @fontSizeLarge:         @baseFontSize * 1.25; // ~18px
+@fontSizeMedium:		ceil(@baseFontSize * 1.15);
 /* >>> JUI >>> */
 @fontSizeSmall:         ceil(@baseFontSize * 0.90); // ~12px
 /* <<< JUI <<< */

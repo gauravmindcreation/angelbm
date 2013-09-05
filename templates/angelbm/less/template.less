@@ -13,7 +13,7 @@
 // Base CSS
 @import "type.less";
 @import "../../../media/jui/less/code.less";
-@import "forms.less";
+@import "../../../media/jui/less/forms.less";
 @import "../../../media/jui/less/tables.less";
 
 // Components: common
@@ -85,6 +85,11 @@
 // Icon Font
 @import "icomoon.less";
 
+.row-fluid [class*="span"].center {
+	float:none;
+	margin:0 auto;
+}
+
 /* Site Body Styles */
 body.site{
 	background-repeat:repeat;
@@ -106,6 +111,10 @@ body.site > .container {
 @media (max-width:767px) {
 	body.site > .container {
 		padding:0;
+	}
+
+	[class*="row"] > [class*="pull-"] {
+		float:none;
 	}
 }
 
@@ -188,12 +197,22 @@ body.site > .container {
 
 h1, h2, h3, h4, h5, h6 {
   margin: (@baseLineHeight / 1.5) 0;
+
+  > a {
+  	color:@linkColor;
+  	.transition(color .4s linear);
+
+  	&:hover {
+  		text-decoration: none;
+  		color:@linkColorHover;
+  	}
+  }
 }
-h1 { font-size: 26px; line-height: 28px; }
-h2 { font-size: 22px; line-height: 24px; }
-h3 { font-size: 18px; line-height: 20px; }
-h4 { font-size: 14px; line-height: 16px; }
-h5 { font-size: 13px; line-height: 15px; }
+h1 { font-size: 40px; line-height: 42px; }
+h2 { font-size: 32px; line-height: 34px; }
+h3 { font-size: 24px; line-height: 26px; }
+h4 { font-size: 16px; line-height: 18px; }
+h5 { font-size: 14px; line-height: 16px; }
 h6 { font-size: 12px; line-height: 14px; }
 /* Module */
 .module-header {
@@ -713,6 +732,13 @@ div.current dd.tabs {
 .italic {
 	font-style:italic;
 }
+.bold {
+	font-weight:bold;
+}
+.medium {
+	font-size:@fontSizeMedium;
+	line-height: ceil(@fontSizeMedium * 1.5);
+}
 .script {
 	font-family:'Rosarivo';
 }
@@ -762,5 +788,73 @@ div.current dd.tabs {
 
 	p {
 		margin:10px 0;
+	}
+}
+.homepage-carousel {
+	.carousel {
+		margin-bottom:0;
+	}
+
+	.message {
+		position:absolute;
+		right:0;
+		top:20px;
+
+		h2 {
+			font-size:3em;
+			font-weight: normal;
+			line-height:1.3em;
+			text-align: left;
+
+			span {
+				display: block;
+				text-indent:2em;
+				color:@linkColor;
+			}
+		}
+
+		p {
+			line-height: 2em;
+			margin:2em 0;
+		}
+	}
+}
+@media (max-width:979px) {
+	.homepage-carousel {
+		.message {
+			top:0;
+
+			h2 {
+				font-size:2em;
+			}
+
+			p {
+				margin: 1em 0;
+			}
+		}
+	}
+}
+@media (max-width:767px) {
+	.homepage-carousel {
+		.message {
+			position:relative;
+			top:0;
+
+			h2 {
+				.text-center();
+
+				span {
+					display:inline;
+				}
+			}
+
+			p {
+				padding:0 4em;
+			}
+		}
+
+		img {
+			display:none!important;
+		}
 	}
 }

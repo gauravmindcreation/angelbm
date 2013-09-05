@@ -207,7 +207,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  color: #333333;
+  color: #584b62;
   background-color: #ffffff;
 }
 a {
@@ -813,7 +813,7 @@ pre {
   padding: 0 3px 2px;
   font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
   font-size: 11px;
-  color: #333333;
+  color: #584b62;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -872,7 +872,7 @@ legend {
   margin-bottom: 18px;
   font-size: 19.5px;
   line-height: 36px;
-  color: #333333;
+  color: #584b62;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -917,11 +917,11 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   display: inline-block;
-  padding: 9px 6px;
+  height: 18px;
+  padding: 4px 6px;
   margin-bottom: 9px;
   font-size: 13px;
-  height: 38px;
-  line-height: 38px;
+  line-height: 18px;
   color: #555555;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -1402,7 +1402,7 @@ select:focus:invalid:focus {
 }
 .help-block,
 .help-inline {
-  color: #595959;
+  color: #7f6c8d;
 }
 .help-block {
   display: block;
@@ -2013,7 +2013,7 @@ table th[class*="span"],
   clear: both;
   font-weight: normal;
   line-height: 18px;
-  color: #333333;
+  color: #584b62;
   white-space: nowrap;
 }
 .dropdown-menu > li > a:hover,
@@ -2034,7 +2034,7 @@ table th[class*="span"],
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  color: #333333;
+  color: #584b62;
   text-decoration: none;
   outline: 0;
   background-color: #a31e6c;
@@ -2239,7 +2239,7 @@ button.close {
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  color: #333333;
+  color: #584b62;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   background-color: #f5f5f5;
   background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
@@ -2274,7 +2274,7 @@ button.close {
 .btn.active,
 .btn.disabled,
 .btn[disabled] {
-  color: #333333;
+  color: #584b62;
   background-color: #e6e6e6;
   *background-color: #d9d9d9;
 }
@@ -2287,7 +2287,7 @@ button.close {
 }
 .btn:hover,
 .btn:focus {
-  color: #333333;
+  color: #584b62;
   text-decoration: none;
   background-position: 0 -15px;
   -webkit-transition: background-position 0.1s linear;
@@ -2618,7 +2618,7 @@ input[type="submit"].btn.btn-mini {
 }
 .btn-link[disabled]:hover,
 .btn-link[disabled]:focus {
-  color: #333333;
+  color: #584b62;
   text-decoration: none;
 }
 .btn.btn-primary {
@@ -3315,7 +3315,7 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar-link:hover,
 .navbar-link:focus {
-  color: #333333;
+  color: #584b62;
 }
 .navbar .divider-vertical {
   height: 40px;
@@ -3471,7 +3471,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
   background-color: transparent;
-  color: #333333;
+  color: #584b62;
   text-decoration: none;
 }
 .navbar .nav > .active > a,
@@ -3575,8 +3575,8 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar .nav li.dropdown > a:hover .caret,
 .navbar .nav li.dropdown > a:focus .caret {
-  border-top-color: #333333;
-  border-bottom-color: #333333;
+  border-top-color: #584b62;
+  border-bottom-color: #584b62;
 }
 .navbar .nav li.dropdown.open > .dropdown-toggle,
 .navbar .nav li.dropdown.active > .dropdown-toggle,
@@ -3714,7 +3714,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-inverse .navbar-search .search-query:focus,
 .navbar-inverse .navbar-search .search-query.focused {
   padding: 5px 15px;
-  color: #333333;
+  color: #584b62;
   text-shadow: 0 1px 0 #ffffff;
   background-color: #ffffff;
   border: 0;
@@ -4355,11 +4355,11 @@ a.badge:focus {
 }
 .label-inverse,
 .badge-inverse {
-  background-color: #333333;
+  background-color: #584b62;
 }
 .label-inverse[href],
 .badge-inverse[href] {
-  background-color: #1a1a1a;
+  background-color: #3e3545;
 }
 .btn .label,
 .btn .badge {
@@ -4640,17 +4640,17 @@ a.badge:focus {
 }
 .carousel-control {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 15px;
-  width: 40px;
-  height: 40px;
-  margin-top: -20px;
-  font-size: 60px;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
+  font-size: 50px;
   font-weight: 100;
-  line-height: 30px;
+  line-height: 20px;
   color: #ffffff;
   text-align: center;
-  background: #222222;
+  background: #e8a6ba;
   border: 3px solid #ffffff;
   -webkit-border-radius: 23px;
   -moz-border-radius: 23px;
@@ -4697,7 +4697,7 @@ a.badge:focus {
   right: 0;
   bottom: 0;
   padding: 15px;
-  background: #333333;
+  background: #584b62;
   background: rgba(0, 0, 0, 0.75);
 }
 .carousel-caption h4,
@@ -8110,6 +8110,10 @@ you can use the generic selector below, but it's slower:
 .icon-IcoMoon:before {
   content: "\e1c2";
 }
+.row-fluid [class*="span"].center {
+  float: none;
+  margin: 0 auto;
+}
 /* Site Body Styles */
 body.site {
   background-repeat: repeat;
@@ -8131,6 +8135,9 @@ body.site > .container {
 @media (max-width: 767px) {
   body.site > .container {
     padding: 0;
+  }
+  [class*="row"] > [class*="pull-"] {
+    float: none;
   }
 }
 .thumbnail {
@@ -8216,25 +8223,46 @@ h5,
 h6 {
   margin: 12px 0;
 }
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+  color: #ac2072;
+  -webkit-transition: color 0.4s linear;
+  -moz-transition: color 0.4s linear;
+  -o-transition: color 0.4s linear;
+  transition: color 0.4s linear;
+}
+h1 > a:hover,
+h2 > a:hover,
+h3 > a:hover,
+h4 > a:hover,
+h5 > a:hover,
+h6 > a:hover {
+  text-decoration: none;
+  color: #6c1447;
+}
 h1 {
-  font-size: 26px;
-  line-height: 28px;
+  font-size: 40px;
+  line-height: 42px;
 }
 h2 {
-  font-size: 22px;
-  line-height: 24px;
+  font-size: 32px;
+  line-height: 34px;
 }
 h3 {
-  font-size: 18px;
-  line-height: 20px;
+  font-size: 24px;
+  line-height: 26px;
 }
 h4 {
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 18px;
 }
 h5 {
-  font-size: 13px;
-  line-height: 15px;
+  font-size: 14px;
+  line-height: 16px;
 }
 h6 {
   font-size: 12px;
@@ -8366,7 +8394,7 @@ h6 {
   font-size: 13px;
   font-weight: normal;
   line-height: 18px;
-  color: #333333;
+  color: #584b62;
   white-space: nowrap;
 }
 .navigation .nav > li {
@@ -8500,14 +8528,14 @@ h6 {
     z-index: 2;
   }
   .nav-tabs.nav-dark > li > a {
-    border: 1px solid #333333;
+    border: 1px solid #584b62;
   }
   .nav-tabs > li:last-child > a,
   .nav-tabs > .active:last-child > a {
-    border-bottom: 1px solid #333333;
+    border-bottom: 1px solid #584b62;
   }
   .nav-tabs.nav-dark > li > a:hover {
-    border-color: #333333;
+    border-color: #584b62;
   }
   .nav-pills > li {
     float: none;
@@ -8741,6 +8769,13 @@ div.current dd.tabs {
 .italic {
   font-style: italic;
 }
+.bold {
+  font-weight: bold;
+}
+.medium {
+  font-size: 15px;
+  line-height: 23px;
+}
 .script {
   font-family: 'Rosarivo';
 }
@@ -8779,4 +8814,56 @@ div.current dd.tabs {
 }
 .footer p {
   margin: 10px 0;
+}
+.homepage-carousel .carousel {
+  margin-bottom: 0;
+}
+.homepage-carousel .message {
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+.homepage-carousel .message h2 {
+  font-size: 3em;
+  font-weight: normal;
+  line-height: 1.3em;
+  text-align: left;
+}
+.homepage-carousel .message h2 span {
+  display: block;
+  text-indent: 2em;
+  color: #ac2072;
+}
+.homepage-carousel .message p {
+  line-height: 2em;
+  margin: 2em 0;
+}
+@media (max-width: 979px) {
+  .homepage-carousel .message {
+    top: 0;
+  }
+  .homepage-carousel .message h2 {
+    font-size: 2em;
+  }
+  .homepage-carousel .message p {
+    margin: 1em 0;
+  }
+}
+@media (max-width: 767px) {
+  .homepage-carousel .message {
+    position: relative;
+    top: 0;
+  }
+  .homepage-carousel .message h2 {
+    text-align: center;
+  }
+  .homepage-carousel .message h2 span {
+    display: inline;
+  }
+  .homepage-carousel .message p {
+    padding: 0 4em;
+  }
+  .homepage-carousel img {
+    display: none!important;
+  }
 }
