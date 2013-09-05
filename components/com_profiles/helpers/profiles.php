@@ -243,6 +243,11 @@ abstract class ProfilesHelper
 		}
 	}
 
+	public static function familyType()
+	{
+		return self::$single ? 'Single' : 'Married';
+	}
+
 	public static function iOrWe()
 	{
 		return self::$single ? 'I' : 'We';

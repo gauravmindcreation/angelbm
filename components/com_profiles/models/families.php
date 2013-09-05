@@ -211,10 +211,10 @@ class ProfilesModelFamilies extends JModelList
 		switch ($familyType)
 		{
 			case 'single':
-				$q->where("a.spouse_name > ''");
+				$q->where("a.spouse_name = ''");
 				break;
 			case 'married':
-				$q->where("a.spouse_name <> ''");
+				$q->where("a.spouse_name != ''");
 				break;
 		}
 
@@ -223,7 +223,7 @@ class ProfilesModelFamilies extends JModelList
 		{
 			$religion = $db->escape($familyReligion);
 
-			//$q->where("(a.my_religion LIKE '%{$religion}%' OR a.spouse_religion LIKE '%{$religion}%')");
+			$q->where("(a.my_religion LIKE '%{$religion}%' OR a.spouse_religion LIKE '%{$religion}%')");
 		}
 
 		return $q;

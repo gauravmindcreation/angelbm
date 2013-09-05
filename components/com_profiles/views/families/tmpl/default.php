@@ -19,9 +19,15 @@ jQuery(document).ready(function($){
 		isPhone = ($(window).width() <= 767),
 		notPhone = !isPhone
 		isTablet = (notPhone && notDesktop),
-		notTable = !isTablet;
+		notTable = !isTablet,
+		startUrlParam = $.url().param('start'),
+		startingPage = 1;
 
 	if (profileList.length > 0) {
+
+		if (typeof startUrlParam != "undefined") {
+			startingPage = (parseInt(startUrlParam) / 10) + 1;
+		}
 
 		if (notPhone) {
 			profileList.imagesLoaded(function(){
@@ -34,11 +40,13 @@ jQuery(document).ready(function($){
 		}
 
 		profileList.infinitescroll({
-			debug:true,
 			appendCallback: false,
 			navSelector: '.pagination',
 			nextSelector: '#main-nav [title="Next"]',
 			itemSelector: '#profiles-list .item',
+			state: {
+				currPage: startingPage
+			},
 			path: function (currPage) {
 				var start = (currPage - 1) * 10;
 				console.log(start);
@@ -47,9 +55,6 @@ jQuery(document).ready(function($){
 			loading: {
 				start: function (opts) {
 					$(opts.contentSelector).infinitescroll('beginAjax', opts);
-				},
-				finished: function () {
-					return false;
 				}
 			}
 		},
@@ -72,7 +77,7 @@ jQuery(document).ready(function($){
 			});
 		});
 
-		if (notDesktop) {
+		if (isPhone) {
 			$(window).unbind('.infscr');
 
 			$('#loadMore').click(function (e) {
@@ -80,7 +85,6 @@ jQuery(document).ready(function($){
 				var base = $(this),
 					origText = base.html(),
 					i = 0;
-
 
 				window.loadingInterval = setInterval(function() {
 						i = ++i % 4;
@@ -128,6 +132,7 @@ JFactory::getDocument()
 	->addScript('/media/com_profiles/js/masonry.min.js')
 	->addScript('/media/com_profiles/js/jquery.infinitescroll.min.js')
 	->addScript('/media/com_profiles/js/imagesloaded.min.js')
+	->addScript('/media/com_profiles/js/purl.js')
 	->addScriptDeclaration($js)
 	->addStyleDeclaration($css);
 
@@ -161,8 +166,8 @@ foreach($this->families as $family) :
 				<a href="<?php echo $link; ?>"><?php echo $fullname; ?></a>
 			</h2>
 			<div class="text-center">
-				<span>FAMILY TYPE: <span class="muted">Married</span></span><br />
-				<span>LOCATION: <span class="muted">Illinois</span></span>
+				<span>FAMILY TYPE: <span class="muted"><?php echo ProfilesHelper::familyType(); ?></span></span><br />
+				<span>RELIGION: <span class="muted">Illinois</span></span>
 			</div>
 			<br />
 			<div class="text-center">
@@ -172,6 +177,6 @@ foreach($this->families as $family) :
 	</div>	
 <?php endforeach; ?>
 </div>
-<div id="main-nav" class="pagination visible-desktop"><?php echo $this->pagination->getPagesLinks(); ?></div>
-<div class="clearfix hidden-desktop" style="margin-bottom:10px"><?php echo $this->pagination->loadMoreBtn(); ?></div>
+<div id="main-nav" class="pagination hidden-phone"><?php echo $this->pagination->getPagesLinks(); ?></div>
+<div class="clearfix visible-phone" style="margin-bottom:10px"><?php echo $this->pagination->loadMoreBtn(); ?></div>
 

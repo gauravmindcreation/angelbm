@@ -77,12 +77,12 @@ elseif(strpos($family->video, 'vimeo'))
 			{
 				$races = implode(', ', json_decode($family->adopt_race, true));
 				echo '<h5>RACE OF CHILD INTERESTED IN ADOPTING:</h5>';
-				echo '<p><span>Race of child interested in adopting:</span> '.$races.'</p>';
+				echo '<p>'.$races.'</p>';
 			}
 			if (isset($family->adopt_gender))
 			{
 				echo '<h5>PREFERRED GENDER:</h5>';
-				echo '<p><span>Gender of child interested in adopting:</span> '.$family->adopt_gender.'</p>';
+				echo '<p>'.$family->adopt_gender.'</p>';
 			}
 			?>
 			<div class="buttons">
