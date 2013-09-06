@@ -670,7 +670,6 @@ h4 small {
 .page-header {
   padding-bottom: 8px;
   margin: 18px 0 27px;
-  border-bottom: 1px solid #eeeeee;
 }
 ul,
 ol {
@@ -8819,6 +8818,17 @@ div.current dd.tabs {
   display: block;
   background: #FFF;
 }
+.com_profiles.view-profile .section {
+  padding: 20px;
+  background: #eeecef;
+  background: -moz-linear-gradient(top, #eeecef 0%, #f8f8f9 10%, #ffffff 25%, #ffffff 75%, #f8f8f9 90%, #eeecef 100%, #ffffff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeecef), color-stop(10%, #f8f8f9), color-stop(25%, #ffffff), color-stop(75%, #ffffff), color-stop(90%, #f8f8f9), color-stop(100%, #eeecef), color-stop(100%, #ffffff));
+  background: -webkit-linear-gradient(top, #eeecef 0%, #f8f8f9 10%, #ffffff 25%, #ffffff 75%, #f8f8f9 90%, #eeecef 100%, #ffffff 100%);
+  background: -o-linear-gradient(top, #eeecef 0%, #f8f8f9 10%, #ffffff 25%, #ffffff 75%, #f8f8f9 90%, #eeecef 100%, #ffffff 100%);
+  background: -ms-linear-gradient(top, #eeecef 0%, #f8f8f9 10%, #ffffff 25%, #ffffff 75%, #f8f8f9 90%, #eeecef 100%, #ffffff 100%);
+  background: linear-gradient(to bottom, #eeecef 0%, #f8f8f9 10%, #ffffff 25%, #ffffff 75%, #f8f8f9 90%, #eeecef 100%, #ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeecef', endColorstr='#ffffff', GradientType=0);
+}
 .footer * {
   color: #ffffff;
 }
@@ -8938,16 +8948,24 @@ div.current dd.tabs {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeecef', endColorstr='#ffffff', GradientType=0);
 }
 .info-packet #userForm li .formCaption {
-  width: auto;
-  margin-right: 10px;
+  width: 33%;
+  margin-top: 4px;
 }
-.info-packet #userForm .rsform-block-duedate .formBody {
+.info-packet #userForm .formBody {
   position: relative;
+  width: 66%;
 }
-.info-packet #userForm .rsform-block-duedate .formBody .btnCal {
+.info-packet #userForm .formBody input {
+  width: 100%;
+  padding: 4px 0;
+  text-indent: 6px;
+}
+.info-packet #userForm .rsform-block-duedate .btnCal {
   position: absolute;
   right: 5px;
   top: 5px;
+  width: auto;
+  text-indent: 0;
 }
 .info-packet #userForm .rsform-block-send .formBody {
   text-align: center;

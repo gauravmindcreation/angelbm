@@ -790,6 +790,11 @@ div.current dd.tabs {
 		display:block;
 		background:#FFF;
 	}
+
+	.section {
+		padding:20px;
+		.grayGradient();
+	}
 }
 .footer {
 	* {
@@ -934,18 +939,27 @@ div.current dd.tabs {
 		.grayGradient();
 
 		li .formCaption {
-			width:auto;
-			margin-right:10px;
+			width:33%;
+			margin-top:4px;
 		}
 
-		.rsform-block-duedate .formBody {
+		.formBody {
 			position:relative;
+			width:66%;
 
-			.btnCal {
-				position: absolute;
-				right:5px;
-				top:5px;
+			input {
+				width:100%;
+				padding:4px 0;
+				text-indent:6px;
 			}
+		}
+
+		.rsform-block-duedate .btnCal {
+			position: absolute;
+			right:5px;
+			top:5px;
+			width:auto;
+			text-indent: 0;
 		}
 
 		.rsform-block-send .formBody {
