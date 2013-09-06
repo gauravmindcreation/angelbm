@@ -742,6 +742,16 @@ div.current dd.tabs {
 .script {
 	font-family:'Rosarivo';
 }
+.grayGradient {
+	background: #eeecef;
+	background: -moz-linear-gradient(top, #eeecef 0%, #f8f8f9 10%, #ffffff 25%, #ffffff 75%, #f8f8f9 90%, #eeecef 100%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeecef), color-stop(10%,#f8f8f9), color-stop(25%,#ffffff), color-stop(75%,#ffffff), color-stop(90%,#f8f8f9), color-stop(100%,#eeecef), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top, #eeecef 0%,#f8f8f9 10%,#ffffff 25%,#ffffff 75%,#f8f8f9 90%,#eeecef 100%,#ffffff 100%);
+	background: -o-linear-gradient(top, #eeecef 0%,#f8f8f9 10%,#ffffff 25%,#ffffff 75%,#f8f8f9 90%,#eeecef 100%,#ffffff 100%);
+	background: -ms-linear-gradient(top, #eeecef 0%,#f8f8f9 10%,#ffffff 25%,#ffffff 75%,#f8f8f9 90%,#eeecef 100%,#ffffff 100%);
+	background: linear-gradient(to bottom, #eeecef 0%,#f8f8f9 10%,#ffffff 25%,#ffffff 75%,#f8f8f9 90%,#eeecef 100%,#ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeecef', endColorstr='#ffffff',GradientType=0 );
+}
 .com_profiles.view-profile {
 	#banner {
 		display:none;
@@ -858,11 +868,90 @@ div.current dd.tabs {
 		}
 	}
 }
-.benefits ul li {
-	.italic();
-	.script();
 
-	span {
-		.pull-left();
+.benefits {
+	margin-top:15px;
+	
+	li {
+		.italic();
+		.script();
+		background:url(../img/bm-icons.png) no-repeat;
+		background-position:0 0;
+		padding-left:40px;
+		height:60px;
+		line-height:16px;
+
+		&:before {
+			content:none;
+		}
+
+		&.icon-heart {
+			background-position:0 -238px;
+		}
+
+		&.icon-money {
+			background-position:0 -318px;
+		}
+
+		&.icon-clock {
+			background-position:0 -397px;
+		}
+
+		&.icon-people {
+			background-position:0 0;
+		}
+
+		&.icon-baby {
+			background-position:0 -79px;
+		}
+
+		&.icon-sun {
+			background-position:0 -159px;
+		}
+	}
+}
+.info-packet {
+	img {
+		margin:auto;
+		display: block;
+	}
+
+	h4 {
+		text-indent:-9999px;
+		outline:none;
+		background:url(../img/infopacket_title.png) no-repeat;
+		display:block;
+		width:245px;
+		height:59px;
+		padding:0!important;
+		margin:18px auto;
+		background-size:100% 100%;
+		background-image:url(../img/infopacket_title.svg);
+		border-bottom:none;
+	}
+
+	#userForm {
+		.grayGradient();
+
+		li .formCaption {
+			width:auto;
+			margin-right:10px;
+		}
+
+		.rsform-block-duedate .formBody {
+			position:relative;
+
+			.btnCal {
+				position: absolute;
+				right:5px;
+				top:5px;
+			}
+		}
+
+		.rsform-block-send .formBody {
+			text-align: center;
+			width:100%;
+			margin-bottom:18px;
+		}
 	}
 }
