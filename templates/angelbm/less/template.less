@@ -105,7 +105,7 @@ body.site > .container {
 @media (min-width: 979px) {
 	body.site > .container {
 		width:1000px;
-		max-width:1000px;
+		width:1000px;
 	}
 }
 @media (max-width:767px) {
@@ -117,7 +117,6 @@ body.site > .container {
 		float:none;
 	}
 }
-
 .thumbnail {
 	margin-bottom:9px;
 }
@@ -153,7 +152,6 @@ body.site > .container {
 		margin:auto;
 	}
 }
-
 /* Header */
 .header{
 	margin-bottom: 10px;
@@ -184,7 +182,7 @@ body.site > .container {
 }
 /* Container */
 .container{
-	max-width: 960px;
+	max-width: 1000px;
 }
 .body .container{
 	background-color: #fff;
@@ -298,6 +296,57 @@ h6 { font-size: 12px; line-height: 14px; }
 	border-left: 2px solid @tableBorder;
 	padding-left: 5px;
 }
+
+.custom.interior-banner {
+	background: url(../images/interior-banner.jpg) no-repeat scroll 0 0 transparent;
+	height: 198px;
+	width: 100%;
+	border-bottom: 2px solid #fbd5eb;
+	
+	h1 {
+		font-size: 48px;
+		color: @linkColor;
+		text-align: center;
+		padding: 1em 0 0.5em 10px;
+		margin: 0;
+	}
+	img.right {
+		float: right;
+	}
+	p {
+		text-align: center;
+		color: @grayDark;
+		font-style: italic;
+	    line-height: 2em;
+	    margin: 0;
+	    max-width: 480px;
+	    padding-left: 120px;
+	    padding-right: 20px;
+	    text-align: center;
+	    font-size: 14px;
+		.script;
+	}
+}
+
+.sidebar-nav .moduletable {
+	.grayGradient();
+	box-sizing: border-box;
+	padding: 20px;
+	
+	h3 {
+		font-size: 16px;
+		text-transform: uppercase;
+		color: @linkColor;
+	}
+	ul li {
+		line-height: 16px;
+		margin-bottom: 7px;
+	}
+}
+.sidebar-nav .moduletable .nav {
+
+}
+
 /* Navigation Submenus */
 // The dropdown menu (ul)
 // ----------------------
@@ -716,6 +765,7 @@ div.current dd.tabs {
 	color:#AC2072;
 	font-family:'Rosarivo',sans-serif;
 	padding:24px 0;
+	text-align: right;
 
 	span {
 		.italic();
