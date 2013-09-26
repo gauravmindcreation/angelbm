@@ -120,7 +120,7 @@ if($this->gallery)
 			}
 			?>
 			<div class="buttons">
-				<a href="<?php echo JRoute::_('/index.php?option=com_profiles&amp;tmpl=component&amp;view=contact&amp;id='.$family->id); ?>" class="btn btn-primary contact">contact us</a>
+				<a href="#contact-form" class="btn btn-primary contact">contact us</a>
 				<?php echo $this->gallery ? '<a class="gallery btn btn-primary" id="ourgallery" href="javascript:void(0);">our gallery</a>' : ''; ?>
 				<?php echo $family->video ? '<a rel="'.$videorel.'" class="video btn btn-primary" href="'.$family->video.'">our video</a>' : ''; ?>
 			</div>
