@@ -3,18 +3,23 @@
 function family_image($path = null, $id = null, $size = '', $lightbox = true)
 {	
 	$img = '/uploads/profiles/'.$id.'/'.$size.$path;
+	$return = '';
 	if(!empty($path))
 	{
 		if($lightbox)
 		{
-			echo '<a href="http://www.angeladoptioninc.com/uploads/profiles/'.$id.'/'.$path.'" class="lightbox"><span></span>';
+			$return .= '<a href="http://www.angeladoptioninc.com/uploads/profiles/'.$id.'/'.$path.'" class="lightbox"><span></span>';
 		}
-		echo '<img src="http://www.angeladoptioninc.com'.$img.'" alt="" />';
+
+		$return .= '<img src="http://www.angeladoptioninc.com'.$img.'" alt="" />';
+
 		if($lightbox)
 		{
-			echo '</a>';
+			$return .= '</a>';
 		}
 	}
+
+	return $return;
 }
 
 function me_or_us($is_single = null)

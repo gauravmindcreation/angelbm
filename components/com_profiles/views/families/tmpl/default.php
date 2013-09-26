@@ -166,8 +166,7 @@ foreach($this->families as $family) :
 				<a href="<?php echo $link; ?>"><?php echo $fullname; ?></a>
 			</h3>
 			<div class="text-center">
-				<span>FAMILY TYPE: <span class="muted"><?php echo ProfilesHelper::familyType(); ?></span></span><br />
-				<span>RELIGION: <span class="muted">Illinois</span></span>
+				<span>FAMILY TYPE: <span class="muted"><?php echo ProfilesHelper::familyType(); ?></span></span>
 			</div>
 			<br />
 			<div class="text-center">
