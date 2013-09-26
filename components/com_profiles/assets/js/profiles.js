@@ -38,17 +38,4 @@ jQuery(document).ready(function($){
 			}
 		});
 	});
-
-	$(".buttons a.contact").click(function(e) {
-		e.preventDefault();
-		$.fancybox({
-			'padding'   : 0,
-			'autoScale' : false,
-			'title'     : this.title,
-			'width'     : 750,
-			'height'    : 740,
-			'href'      : this.href,
-			'type'      : 'iframe'
-		});
-	});
 });
