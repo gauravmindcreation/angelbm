@@ -118,7 +118,7 @@ else
 	<!-- Header -->
 	<header class="header" role="banner">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">
-			<div class="header-innerclearfix">
+			<div class="header-innerclearfix row">
 				<div class="header-search pull-right span8">
 					<jdoc:include type="modules" name="position-0" style="none" />
 				</div>
