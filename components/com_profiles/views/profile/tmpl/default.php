@@ -71,7 +71,7 @@ if($this->gallery)
 	{
 		$showing = "Image {$i} of {$count}";
 		$photos .= PHP_EOL . "\t\t\t\t" . "{";
-		$photos .= PHP_EOL . "\t\t\t\t\t" . "'href' : '/uploads/profiles/".$family->id."/".$photo->path."',";
+		$photos .= PHP_EOL . "\t\t\t\t\t" . "'href' : 'http://www.angeladoptioninc.com/uploads/profiles/".$family->id."/".$photo->path."',";
 		$photos .= PHP_EOL . "\t\t\t\t\t" . "'title': '<span class=\"name\">".$fullname."</span><span class=\"showing\">".$showing."</span>'";
 		$photos .= PHP_EOL . "\t\t\t\t" . "},";
 		$i++;
