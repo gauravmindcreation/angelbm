@@ -8128,7 +8128,6 @@ body.site > .container {
 @media (min-width: 979px) {
   body.site > .container {
     width: 1000px;
-    max-width: 1000px;
   }
 }
 @media (max-width: 767px) {
@@ -8204,7 +8203,7 @@ body.site > .container {
 }
 /* Container */
 .container {
-  max-width: 960px;
+  max-width: 1000px;
 }
 .body .container {
   background-color: #fff;
@@ -8345,6 +8344,55 @@ h6 {
 #aside .nav .nav-child {
   border-left: 2px solid #dddddd;
   padding-left: 5px;
+}
+.custom.interior-banner {
+  background: url(../images/interior-banner.jpg) no-repeat scroll 0 0 transparent;
+  height: 198px;
+  width: 100%;
+  border-bottom: 2px solid #fbd5eb;
+}
+.custom.interior-banner h1 {
+  font-size: 48px;
+  color: #ac2072;
+  text-align: center;
+  padding: 1em 0 0.5em 10px;
+  margin: 0;
+}
+.custom.interior-banner img.right {
+  float: right;
+}
+.custom.interior-banner p {
+  color: #584b62;
+  font-style: italic;
+  line-height: 2em;
+  margin: 0;
+  max-width: 480px;
+  padding-left: 120px;
+  padding-right: 20px;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Rosarivo';
+}
+.sidebar-nav .moduletable {
+  background: #eeecef;
+  background: -moz-linear-gradient(top, #eeecef 0%, #f8f8f9 10%, #ffffff 25%, #ffffff 75%, #f8f8f9 90%, #eeecef 100%, #ffffff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeecef), color-stop(10%, #f8f8f9), color-stop(25%, #ffffff), color-stop(75%, #ffffff), color-stop(90%, #f8f8f9), color-stop(100%, #eeecef), color-stop(100%, #ffffff));
+  background: -webkit-linear-gradient(top, #eeecef 0%, #f8f8f9 10%, #ffffff 25%, #ffffff 75%, #f8f8f9 90%, #eeecef 100%, #ffffff 100%);
+  background: -o-linear-gradient(top, #eeecef 0%, #f8f8f9 10%, #ffffff 25%, #ffffff 75%, #f8f8f9 90%, #eeecef 100%, #ffffff 100%);
+  background: -ms-linear-gradient(top, #eeecef 0%, #f8f8f9 10%, #ffffff 25%, #ffffff 75%, #f8f8f9 90%, #eeecef 100%, #ffffff 100%);
+  background: linear-gradient(to bottom, #eeecef 0%, #f8f8f9 10%, #ffffff 25%, #ffffff 75%, #f8f8f9 90%, #eeecef 100%, #ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeecef', endColorstr='#ffffff', GradientType=0);
+  box-sizing: border-box;
+  padding: 20px;
+}
+.sidebar-nav .moduletable h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #ac2072;
+}
+.sidebar-nav .moduletable ul li {
+  line-height: 16px;
+  margin-bottom: 7px;
 }
 /* Navigation Submenus */
 .navigation .nav-child {
@@ -8754,6 +8802,7 @@ div.current dd.tabs {
   color: #AC2072;
   font-family: 'Rosarivo', sans-serif;
   padding: 24px 0;
+  text-align: right;
 }
 .custom-contact span {
   font-style: italic;
