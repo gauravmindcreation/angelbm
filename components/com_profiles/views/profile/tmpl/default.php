@@ -9,6 +9,7 @@
 
 // no direct access
 defined('_JEXEC') or die;
+
 $family = $this->family;
 
 if($family->state !== '1')
@@ -58,6 +59,39 @@ elseif(strpos($family->video, 'vimeo'))
 	$videorel = 'vimeo';
 }
 
+$doc
+	->addScriptDeclaration('function ljs(){var d=document;var e=d.createElement("script");e.src="/components/com_profiles/assets/js/fancybox/jquery.fancybox.js";e.type="text/javascript";d.body.appendChild(e);var f=d.createElement("script");f.src="/components/com_profiles/assets/js/profiles.js";f.type="text/javascript";d.body.appendChild(f)}if(window.addEventListener)window.addEventListener("load",ljs,false);else if(window.attachEvent)window.attachEvent("onload",ljs);else window.onload=ljs;')
+    ->addStyleSheet('/components/com_profiles/assets/js/fancybox/jquery.fancybox.css');
+if($this->gallery)
+{
+	$count = count($this->gallery);
+	$i = 1;
+	$photos = '';
+	foreach($this->gallery as $photo)
+	{
+		$showing = "Image {$i} of {$count}";
+		$photos .= PHP_EOL . "\t\t\t\t" . "{";
+		$photos .= PHP_EOL . "\t\t\t\t\t" . "'href' : '/uploads/profiles/".$family->id."/".$photo->path."',";
+		$photos .= PHP_EOL . "\t\t\t\t\t" . "'title': '<span class=\"name\">".$fullname."</span><span class=\"showing\">".$showing."</span>'";
+		$photos .= PHP_EOL . "\t\t\t\t" . "},";
+		$i++;
+	}
+	unset($i);
+	$photos = rtrim($photos, ',');
+	$doc->addScriptDeclaration("
+	jQuery(document).ready(function($){
+	    $('#ourgallery').click(function() {
+			$.fancybox([".$photos."
+				], {
+				'titlePosition'	: 'inside',
+				'type'			: 'image',
+				'changeFade'	: 0
+			});
+		});
+	});
+	");
+}
+
 ?>
 <div id="user_profile">
 	<?php if(JRequest::getVar('tmpl') !== 'component'): ?>
@@ -86,7 +120,7 @@ elseif(strpos($family->video, 'vimeo'))
 			}
 			?>
 			<div class="buttons">
-				<a href="<?php echo JRoute::_('/index.php?option=com_profiles&amp;tmpl=component&amp;view=contact&amp;id='.$family->id); ?>" class="btn btn-primary">contact us</a>
+				<a href="<?php echo JRoute::_('/index.php?option=com_profiles&amp;tmpl=component&amp;view=contact&amp;id='.$family->id); ?>" class="btn btn-primary contact">contact us</a>
 				<?php echo $this->gallery ? '<a class="gallery btn btn-primary" id="ourgallery" href="javascript:void(0);">our gallery</a>' : ''; ?>
 				<?php echo $family->video ? '<a rel="'.$videorel.'" class="video btn btn-primary" href="'.$family->video.'">our video</a>' : ''; ?>
 			</div>
@@ -231,5 +265,14 @@ elseif(strpos($family->video, 'vimeo'))
 			</div>
 		</div>
 		<br />
+		<div id="contact-form">
+			<?php
+			$app = JFactory::getApplication();
+
+			$app->setUserState('family.name', $fullname);
+
+			echo EEHelper::getRsForm(31, true);
+			?>
+		</div>
 	</div>
 </div>
