@@ -8356,7 +8356,7 @@ h6 {
   padding-left: 5px;
 }
 .custom.interior-banner {
-  background: url(../images/interior-banner.jpg) no-repeat scroll 0 0 transparent;
+  background: url(../images/interior-banner2.jpg) no-repeat scroll right 0 transparent;
   height: 198px;
   width: 100%;
   border-bottom: 2px solid #fbd5eb;
@@ -8365,23 +8365,23 @@ h6 {
   font-size: 48px;
   color: #ac2072;
   text-align: center;
-  padding: 1em 0 0.5em 10px;
+  padding: 75px 360px 0 10px;
   margin: 0;
 }
-.custom.interior-banner img.right {
-  float: right;
+@media (max-width: 480px) {
+  .custom.interior-banner h1 {
+    font-size: 250%;
+    line-height: 1em;
+    padding: 140px 0 0 10px;
+    text-shadow: 1px 1px 1px #FFFFFF;
+  }
 }
-.custom.interior-banner p {
-  color: #584b62;
-  font-style: italic;
-  line-height: 2em;
-  margin: 0;
-  max-width: 480px;
-  padding-left: 120px;
-  padding-right: 20px;
-  text-align: center;
-  font-size: 14px;
-  font-family: 'Rosarivo';
+@media (min-width: 481px) and (max-width: 660px) {
+  .custom.interior-banner h1 {
+    font-size: 200%;
+    line-height: 1em;
+    text-shadow: 1px 1px 1px #FFFFFF;
+  }
 }
 .sidebar-nav .moduletable {
   background: #eeecef;
@@ -8404,6 +8404,27 @@ h6 {
   line-height: 16px;
   margin-bottom: 7px;
 }
+/*
+#familyform li.half {
+	width: 50%;
+	box-sizing: border-box;
+	float: left;
+}
+#familyform li.third {
+	float: left;
+	width: 33%;
+}
+#familyform .formBody {
+	float: none;
+}
+#familyform li.rsform-block-email:after,
+#familyform li.rsform-block-due-date:after {
+	clear: both;
+	display: block;
+	content: "";
+	visibility: hidden;
+}
+*/
 /* Navigation Submenus */
 .navigation .nav-child {
   position: absolute;

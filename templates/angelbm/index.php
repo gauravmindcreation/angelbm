@@ -118,11 +118,11 @@ else
 	<!-- Header -->
 	<header class="header" role="banner">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">
-			<div class="header-inner clearfix">
-				<div class="header-search pull-right">
+			<div class="header-innerclearfix">
+				<div class="header-search pull-right span8">
 					<jdoc:include type="modules" name="position-0" style="none" />
 				</div>
-				<a class="brand pull-left" href="<?php echo $this->baseurl; ?>">
+				<a class="brand pull-left span4" href="<?php echo $this->baseurl; ?>">
 					<?php echo $logo;?> <?php if ($this->params->get('sitedescription')) { echo '<div class="site-description">'. htmlspecialchars($this->params->get('sitedescription')) .'</div>'; } ?>
 				</a>
 			</div>
