@@ -1,9 +1,9 @@
 <?php
 
-function family_image($path = null, $id = null, $size = '150_150_', $lightbox = true)
+function family_image($path = null, $id = null, $size = '', $lightbox = true)
 {	
 	$img = '/uploads/profiles/'.$id.'/'.$size.$path;
-	if(true)
+	if(!empty($path))
 	{
 		if($lightbox)
 		{
