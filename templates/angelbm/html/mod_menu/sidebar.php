@@ -10,12 +10,14 @@
 defined('_JEXEC') or die;
 
 // Note. It is important to remove spaces between elements.
-$menu = &JSite::getMenu();
+
+$menu = JFactory::getApplication()->getMenu();
 $active = $menu->getActive();
 $menuname = $active->title;
 $parentId = $active->tree[0];
 $parentName = $menu->getItem($parentId)->title;
 ?>
+
 <?php // The menu class is deprecated. Use nav instead.
 	echo '<h3>'.$parentName.'</h3>';
 	
