@@ -258,7 +258,7 @@ if($this->gallery)
 						<li><span class="lbl">Favorite TV Show:</span> <span><?php echo htmlspecialchars($family->spouse_tv_show);?></span></li>
 						<li><span class="lbl">Favorite Book:</span> <span><?php echo htmlspecialchars($family->spouse_book);?></span></li>
 						<li><span class="lbl">Favorite Subject in School:</span> <span><?php echo htmlspecialchars($family->spouse_subject_in_school);?></span></li>
-						<li><span>Favorite Vacation Spot:</span> <span><?php echo htmlspecialchars($family->spouse_vacation_spot);?></span></li>
+						<li><span class="lbl">Favorite Vacation Spot:</span> <span><?php echo htmlspecialchars($family->spouse_vacation_spot);?></span></li>
 					</ul>
 				</div>
 				<?php endif; ?>
