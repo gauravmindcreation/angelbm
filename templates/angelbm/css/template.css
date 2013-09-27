@@ -8450,9 +8450,6 @@ h6 {
   margin: 0 auto;
 }
 #familyform li.rsform-block-submit input {
-  width: 11em;
-  margin: 0 auto;
-  display: block;
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
@@ -8504,6 +8501,9 @@ h6 {
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  width: 11em;
+  margin: 0 auto;
+  display: block;
 }
 #familyform li.rsform-block-submit input:hover,
 #familyform li.rsform-block-submit input:focus,
@@ -8587,6 +8587,23 @@ h6 {
   display: block;
   content: "";
   visibility: hidden;
+}
+#favorites div.single {
+  width: 100%;
+  padding: 0 30px;
+}
+#favorites .span6 {
+  width: 49%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+#favorites .span6:first-child {
+  margin-right: 2%;
+}
+#favorites div.spouse {
+  background: url(../images/vertical-heart-seperator.png) no-repeat scroll 0 0 transparent;
+  padding-left: 40px;
 }
 /* Navigation Submenus */
 .navigation .nav-child {

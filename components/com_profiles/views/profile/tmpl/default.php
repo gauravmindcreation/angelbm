@@ -224,7 +224,7 @@ if($this->gallery)
 		<hr />
 		<div class="section" id="favorites">
 			<div class="row-fluid">
-				<div class="span6">
+				<div class="span<?php echo ($is_single ? "12 single" : "6"); ?>">
 					<h3>Facts About <?php echo $family->first_name?></h3>
 					<ul class="unstyled">
 						<li><span>Occupation:</span> <?php echo htmlspecialchars($family->my_occupation);?></li>
@@ -243,7 +243,7 @@ if($this->gallery)
 					</ul>
 				</div>
 				<?php if(!$is_single) : ?>
-				<div class="span6">
+				<div class="span6 spouse">
 					<h3>Facts About <?php echo $family->spouse_name?></h3>
 					<ul class="unstyled">
 						<li><span>Occupation:</span> <?php echo htmlspecialchars($family->spouse_occupation);?></li>
@@ -265,14 +265,17 @@ if($this->gallery)
 			</div>
 		</div>
 		<br />
-		<div id="contact-form">
-			<?php
-			$app = JFactory::getApplication();
-
-			$app->setUserState('family.name', $fullname);
-
-			echo EEHelper::getRsForm(31, true);
-			?>
+		<div id="contact-form" class="section">
+			<div class="form-container">
+				<h3><?php echo $fullname; ?></h3>
+				<?php
+				$app = JFactory::getApplication();
+	
+				$app->setUserState('family.name', $fullname);
+	
+				echo EEHelper::getRsForm(31, true);
+				?>
+			</div>
 		</div>
 	</div>
 </div>
