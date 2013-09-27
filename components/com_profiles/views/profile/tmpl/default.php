@@ -224,41 +224,41 @@ if($this->gallery)
 		<hr />
 		<div class="section" id="favorites">
 			<div class="row-fluid">
-				<div class="span<?php echo ($is_single ? "12 single" : "6"); ?>">
+				<div class="span<?php echo ($is_single ? "12 single" : "6 myself"); ?>">
 					<h3>Facts About <?php echo $family->first_name?></h3>
 					<ul class="unstyled">
-						<li><span>Occupation:</span> <?php echo htmlspecialchars($family->my_occupation);?></li>
-						<li><span>Religion:</span> <?php echo htmlspecialchars($family->my_religion);?></li>
-						<li><span>Education:</span> <?php echo htmlspecialchars($family->my_education);?></li>
-						<li><span>Favorite Food:</span> <?php echo htmlspecialchars($family->my_food);?></li>
-						<li><span>Favorite Hobby:</span> <?php echo htmlspecialchars($family->my_hobby);?></li>
-						<li><span>Favorite Movie:</span> <?php echo htmlspecialchars($family->my_movie);?></li>
-						<li><span>Favorite Sport:</span> <?php echo htmlspecialchars($family->my_sport);?></li>
-						<li><span>Favorite Holiday:</span> <?php echo htmlspecialchars($family->my_holiday);?></li>
-						<li><span>Favorite Music Group:</span> <?php echo htmlspecialchars($family->my_music_group);?></li>
-						<li><span>Favorite TV Show:</span> <?php echo htmlspecialchars($family->my_tv_show);?></li>
-						<li><span>Favorite Book:</span> <?php echo htmlspecialchars($family->my_book);?></li>
-						<li><span>Favorite Subject in School:</span> <?php echo htmlspecialchars($family->my_subject_in_school);?></li>
-						<li><span>Favorite Vacation Spot:</span> <?php echo htmlspecialchars($family->my_vacation_spot);?></li>
+						<li><span class="label">Occupation:</span> <span><?php echo htmlspecialchars($family->my_occupation);?></span></li>
+						<li><span class="label">Religion:</span> <span><?php echo htmlspecialchars($family->my_religion);?></span></li>
+						<li><span class="label">Education:</span> <span><?php echo htmlspecialchars($family->my_education);?></span></li>
+						<li><span class="label">Favorite Food:</span> <span><?php echo htmlspecialchars($family->my_food);?></span></li>
+						<li><span class="label">Favorite Hobby:</span> <span><?php echo htmlspecialchars($family->my_hobby);?></span></li>
+						<li><span class="label">Favorite Movie:</span> <span><?php echo htmlspecialchars($family->my_movie);?></span></li>
+						<li><span class="label">Favorite Sport:</span> <span><?php echo htmlspecialchars($family->my_sport);?></span></li>
+						<li><span class="label">Favorite Holiday:</span> <span><?php echo htmlspecialchars($family->my_holiday);?></span></li>
+						<li><span class="label">Favorite Music Group:</span> <span><?php echo htmlspecialchars($family->my_music_group);?></span></li>
+						<li><span class="label">Favorite TV Show:</span> <span><?php echo htmlspecialchars($family->my_tv_show);?></span></li>
+						<li><span class="label">Favorite Book:</span> <span><?php echo htmlspecialchars($family->my_book);?></span></li>
+						<li><span class="label">Favorite Subject in School:</span> <span><?php echo htmlspecialchars($family->my_subject_in_school);?></span></li>
+						<li><span class="label">Favorite Vacation Spot:</span> <span><?php echo htmlspecialchars($family->my_vacation_spot);?></span></li>
 					</ul>
 				</div>
 				<?php if(!$is_single) : ?>
 				<div class="span6 spouse">
 					<h3>Facts About <?php echo $family->spouse_name?></h3>
 					<ul class="unstyled">
-						<li><span>Occupation:</span> <?php echo htmlspecialchars($family->spouse_occupation);?></li>
-						<li><span>Religion:</span> <?php echo htmlspecialchars($family->spouse_religion);?></li>
-						<li><span>Education:</span> <?php echo htmlspecialchars($family->spouse_education);?></li>
-						<li><span>Favorite Food:</span> <?php echo htmlspecialchars($family->spouse_food);?></li>
-						<li><span>Favorite Hobby:</span> <?php echo htmlspecialchars($family->spouse_hobby);?></li>
-						<li><span>Favorite Movie:</span> <?php echo htmlspecialchars($family->spouse_movie);?></li>
-						<li><span>Favorite Sport:</span> <?php echo htmlspecialchars($family->spouse_sport);?></li>
-						<li><span>Favorite Holiday:</span> <?php echo htmlspecialchars($family->spouse_holiday);?></li>
-						<li><span>Favorite Music Group:</span> <?php echo htmlspecialchars($family->spouse_music_group);?></li>
-						<li><span>Favorite TV Show:</span> <?php echo htmlspecialchars($family->spouse_tv_show);?></li>
-						<li><span>Favorite Book:</span> <?php echo htmlspecialchars($family->spouse_book);?></li>
-						<li><span>Favorite Subject in School:</span> <?php echo htmlspecialchars($family->spouse_subject_in_school);?></li>
-						<li><span>Favorite Vacation Spot:</span> <?php echo htmlspecialchars($family->spouse_vacation_spot);?></li>
+						<li><span class="label">Occupation:</span> <span><?php echo htmlspecialchars($family->spouse_occupation);?></span></li>
+						<li><span class="label">Religion:</span> <span><?php echo htmlspecialchars($family->spouse_religion);?></span></li>
+						<li><span class="label">Education:</span> <span><?php echo htmlspecialchars($family->spouse_education);?></span></li>
+						<li><span class="label">Favorite Food:</span> <span><?php echo htmlspecialchars($family->spouse_food);?></span></li>
+						<li><span class="label">Favorite Hobby:</span> <span><?php echo htmlspecialchars($family->spouse_hobby);?></span></li>
+						<li><span class="label">Favorite Movie:</span> <span><?php echo htmlspecialchars($family->spouse_movie);?></span></li>
+						<li><span class="label">Favorite Sport:</span> <span><?php echo htmlspecialchars($family->spouse_sport);?></span></li>
+						<li><span class="label">Favorite Holiday:</span> <span><?php echo htmlspecialchars($family->spouse_holiday);?></span></li>
+						<li><span class="label">Favorite Music Group:</span> <span><?php echo htmlspecialchars($family->spouse_music_group);?></span></li>
+						<li><span class="label">Favorite TV Show:</span> <span><?php echo htmlspecialchars($family->spouse_tv_show);?></span></li>
+						<li><span class="label">Favorite Book:</span> <span><?php echo htmlspecialchars($family->spouse_book);?></span></li>
+						<li><span class="label">Favorite Subject in School:</span> <span><?php echo htmlspecialchars($family->spouse_subject_in_school);?></span></li>
+						<li><span>Favorite Vacation Spot:</span> <span><?php echo htmlspecialchars($family->spouse_vacation_spot);?></span></li>
 					</ul>
 				</div>
 				<?php endif; ?>
@@ -267,7 +267,7 @@ if($this->gallery)
 		<br />
 		<div id="contact-form" class="section">
 			<div class="form-container">
-				<h3><?php echo $fullname; ?></h3>
+				<h3>Contact <?php echo $fullname; ?></h3>
 				<?php
 				$app = JFactory::getApplication();
 	
