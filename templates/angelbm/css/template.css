@@ -8602,6 +8602,9 @@ h6 {
 #favorites .span6 {
   padding-left: 10%;
   width: 40%;
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
 }
 #favorites .span6.myself {
   padding-left: 5%;
@@ -8610,7 +8613,7 @@ h6 {
 }
 #favorites div.spouse {
   background: url(../images/vertical-heart-seperator.png) no-repeat scroll 0 0 transparent;
-  padding-left: 40px;
+  padding-left: 10%;
   margin: 0;
 }
 #favorites li span {
@@ -8618,7 +8621,7 @@ h6 {
   width: 55%;
   display: block;
 }
-#favorites li span.label {
+#favorites li span.lbl {
   font-family: 'Rosarivo';
   color: #584b62;
   text-transform: uppercase;
