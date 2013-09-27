@@ -8604,6 +8604,7 @@ h6 {
 #favorites div.spouse {
   background: url(../images/vertical-heart-seperator.png) no-repeat scroll 0 0 transparent;
   padding-left: 40px;
+  margin: 0;
 }
 /* Navigation Submenus */
 .navigation .nav-child {
