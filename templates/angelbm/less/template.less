@@ -356,15 +356,56 @@ h6 { font-size: 12px; line-height: 14px; }
 .sidebar-nav .moduletable .nav {
 
 }
-/*
+#familyform li {
+	padding: 0;
+	margin-bottom: 5px;
+}
 #familyform li.half {
-	width: 50%;
+	width: 49%;
 	box-sizing: border-box;
+	-moz-box-sizing:border-box;
 	float: left;
+	clear: none;
+}
+#familyform li.full {
+	width: 100%;
+}
+#familyform textarea {
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	width: 100%;
+}
+#familyform li.rsform-block-name {
+	margin-right: 2%;
 }
 #familyform li.third {
 	float: left;
-	width: 33%;
+	width: 31.333333%;
+	margin-right: 3%;
+	box-sizing: border-box;
+	-moz-box-sizing:border-box;
+	clear: none;
+}
+#familyform li.rsform-block-due-date {
+	margin: 0;
+}
+#familyform li input[type="text"], #familyform li select {
+    box-sizing: border-box;
+	-moz-box-sizing:border-box;
+    height: 30px;
+    padding: 4px;
+    width: 100% !important;
+}
+#familyform li.rsform-block-submit {
+	width: 50%;
+	margin: 0 auto;
+}
+#familyform li.rsform-block-submit input {
+	width: 11em;
+	margin: 0 auto;
+	display: block;
+	.btn;
+	.btn-primary;
 }
 #familyform .formBody {
 	float: none;
@@ -376,7 +417,6 @@ h6 { font-size: 12px; line-height: 14px; }
 	content: "";
 	visibility: hidden;
 }
-*/
 
 /* Navigation Submenus */
 // The dropdown menu (ul)
