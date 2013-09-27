@@ -357,15 +357,15 @@ h6 { font-size: 12px; line-height: 14px; }
 
 }
 .formContainer li {
-	padding: 0;
-	margin-bottom: 5px;
+    margin-bottom: 10px !important;
+    padding: 0 !important;
 }
 .formContainer li.half {
 	width: 49%;
 	box-sizing: border-box;
 	-moz-box-sizing:border-box;
 	float: left;
-	clear: none;
+	clear: none !important;
 }
 .formContainer li.full {
 	width: 100%;
@@ -376,9 +376,10 @@ h6 { font-size: 12px; line-height: 14px; }
 	width: 100%;
 	border-radius: 0;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.18) inset;
+    resize: vertical;
 }
-.formContainer li.rsform-block-name {
-	margin-right: 2%;
+.formContainer li.half:first-child {
+	margin-right: 2% !important;
 }
 .formContainer li.third {
 	float: left;
@@ -402,7 +403,7 @@ h6 { font-size: 12px; line-height: 14px; }
 }
 .formContainer li.rsform-block-submit {
 	width: 50%;
-	margin: 0 auto;
+	margin: 0 auto !important;
 }
 .formContainer li.rsform-block-submit input {
 	.btn;
