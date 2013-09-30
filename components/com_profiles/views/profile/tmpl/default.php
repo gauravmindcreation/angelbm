@@ -60,8 +60,8 @@ elseif(strpos($family->video, 'vimeo'))
 }
 
 $doc
-	->addScriptDeclaration('function ljs(){var d=document;var e=d.createElement("script");e.src="/components/com_profiles/assets/js/fancybox/jquery.fancybox.js";e.type="text/javascript";d.body.appendChild(e);var f=d.createElement("script");f.src="/components/com_profiles/assets/js/profiles.js";f.type="text/javascript";d.body.appendChild(f)}if(window.addEventListener)window.addEventListener("load",ljs,false);else if(window.attachEvent)window.attachEvent("onload",ljs);else window.onload=ljs;')
-    ->addStyleSheet('/components/com_profiles/assets/js/fancybox/jquery.fancybox.css');
+	->addScriptDeclaration('function ljs(){var d=document;var e=d.createElement("script");e.src="/components/com_profiles/assets/jquery.fancybox.js";e.type="text/javascript";d.body.appendChild(e);var f=d.createElement("script");f.src="/components/com_profiles/assets/js/profiles.js";f.type="text/javascript";d.body.appendChild(f)}if(window.addEventListener)window.addEventListener("load",ljs,false);else if(window.attachEvent)window.attachEvent("onload",ljs);else window.onload=ljs;')
+    ->addStyleSheet('/components/com_profiles/assets/jquery.fancybox.css');
 if($this->gallery)
 {
 	$count = count($this->gallery);
