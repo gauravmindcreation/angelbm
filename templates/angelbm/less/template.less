@@ -353,8 +353,22 @@ h6 { font-size: 12px; line-height: 14px; }
 		margin-bottom: 7px;
 	}
 }
-.sidebar-nav .moduletable .nav {
-
+.sidebar-nav .full-menu-sidebar > ul > li > a {
+	font-size: 16px;
+	text-transform: uppercase;
+	color: @linkColor;
+	margin: 10px 0;
+	.script;
+}
+.sidebar-nav .full-menu-sidebar > ul > li > ul {
+	margin: 2px 0 10px 5px;
+}
+.sidebar-nav a:hover {
+	background: none !important;
+	color: @linkColorHover !important;
+}
+.sidebar-nav li.current a {
+	font-weight: bold;
 }
 .formContainer li {
     margin-bottom: 10px !important;
@@ -408,13 +422,91 @@ h6 { font-size: 12px; line-height: 14px; }
 .formContainer li.rsform-block-submit input {
 	.btn;
 	.btn-primary;
-	width: 11em;
 	margin: 0 auto;
 	display: block;	
 }
 
 .formContainer .formBody {
 	float: none;
+}
+form#freeinfo {
+	padding: 20px;
+	clear: both;
+	
+	.rsform-block-firstname,
+	.rsform-block-lastname,
+	.rsform-block-dayphone,
+	.rsform-block-email,
+	.rsform-block-streetaddress,
+	.rsform-block-city,
+	.rsform-block-state,
+	.rsform-block-zip,
+	.rsform-block-age,
+	.rsform-block-duedate,
+	.rsform-block-race,
+	.rsform-block-race2 {
+		float: left;
+		width: 49%;
+		clear: none;
+	}
+	.rsform-block-firstname,
+	.rsform-block-dayphone,
+	.rsform-block-streetaddress,
+	.rsform-block-state,
+	.rsform-block-age,
+	.rsform-block-race {
+		margin-right: 2%;
+	}
+	select {
+		width: 100%;
+	}
+	
+}
+.formBody {
+	position: relative;
+}
+#btn5_0 {
+	position: absolute;
+	top: 6px;
+	right: 5px;
+}
+form#freeinfo .formFieldset .formBody label {
+	display: inline-block;
+}
+.info-paragraph {
+    float: left;
+    .script;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5em;
+    width: 490px;
+    padding-top: 25px;
+}
+body.itemid-138 .page-header {
+	margin: 0;
+	padding: 0;
+	
+	h1 {
+		margin-bottom: 0;
+	}
+}
+.rsform-block-packet-text .formBody {
+	font-style: italic;
+	color: @linkColor;
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+}
+.rsform-block-mailingtext .formBody {
+	color: @linkColor;
+}
+form#freeinfo legend {
+	.script;
+	background:url(../images/icon-heart.png) no-repeat scroll 0 0 transparent;
+	border: medium none;
+	padding-left: 40px;
+	font-weight: normal;
+	font-style: italic;
 }
 #familyform li.rsform-block-email:after,
 #familyform li.rsform-block-due-date:after {
