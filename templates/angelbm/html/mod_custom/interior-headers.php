@@ -15,6 +15,17 @@ $menuname = $active->title;
 $parentId = $active->tree[0];
 $parentName = $menu->getItem($parentId)->title;
 
+switch ($parentName) {
+	case "FAQs":
+		$parentName = "Frequently Asked Questions";
+		break;
+	case "Free Info":
+		$parentName = "Free Adoption Information";
+		break;
+	case "Resources":
+		$parentName = "Birthmother Resources";
+		break;
+}
 ?>
 
 

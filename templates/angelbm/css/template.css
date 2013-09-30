@@ -8419,7 +8419,7 @@ h6 {
   color: #6c1447 !important;
 }
 .sidebar-nav li.current a {
-  font-weight: bold;
+  color: #6c1447;
 }
 .formContainer li {
   margin-bottom: 10px !important;
@@ -8659,6 +8659,15 @@ body.itemid-138 .page-header {
 }
 body.itemid-138 .page-header h1 {
   margin-bottom: 0;
+}
+.item-page.faqs h3 {
+  background: url(../images/icon-heart.png) no-repeat scroll 0 0 transparent;
+  padding-left: 40px;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 20px 0 12px;
 }
 .rsform-block-packet-text .formBody {
   font-style: italic;
