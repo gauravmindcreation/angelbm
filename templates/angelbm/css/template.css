@@ -8419,7 +8419,7 @@ h6 {
   color: #6c1447 !important;
 }
 .sidebar-nav li.current a {
-  color: #6c1447;
+  color: #6c1447 !important;
 }
 .formContainer li {
   margin-bottom: 10px !important;
@@ -8447,15 +8447,15 @@ h6 {
   margin-right: 2% !important;
 }
 .formContainer li.third {
+  clear: none !important;
   float: left;
-  width: 31.333333%;
-  margin-right: 3%;
+  margin-right: 3% !important;
+  width: 31.3%;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  clear: none;
 }
 .formContainer li.rsform-block-due-date {
-  margin: 0;
+  margin-right: 0 !important;
 }
 .formContainer li input[type="text"],
 #familyform li select {
@@ -8668,6 +8668,8 @@ body.itemid-138 .page-header h1 {
   font-weight: normal;
   line-height: 1.2em;
   margin: 20px 0 12px;
+  padding-top: 5px;
+  min-height: 31px;
 }
 .rsform-block-packet-text .formBody {
   font-style: italic;
@@ -8701,51 +8703,53 @@ form#freeinfo legend {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-#favorites .span6 {
-  padding-left: 10%;
-  width: 40%;
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
-  box-sizing: inherit;
-}
-#favorites .span6.myself {
-  padding-left: 4%;
-  padding-right: 1%;
-  width: 43%;
-}
-#favorites div.spouse {
-  background: url(../images/vertical-heart-seperator.png) no-repeat scroll 0 0 transparent;
-  margin: 0;
-  padding-left: 6%;
-  padding-right: 1%;
-  width: 45%;
-}
-#favorites ul.unstyled {
-  margin-top: 20px;
-}
-#favorites li {
-  line-height: 1.3em;
-  margin-bottom: 8px;
-}
-#favorites li span {
-  display: block;
-  float: left;
-  width: 49%;
-  margin-left: 1%;
-}
-#favorites li span.lbl {
-  font-family: 'Rosarivo';
-  color: #584b62;
-  text-transform: uppercase;
-  font-size: 14px;
-  width: 50%;
-  margin: 0;
-}
-#favorites li:after {
-  content: "";
-  display: block;
-  clear: both;
-  visibility: hidden;
+@media (min-width: 768px) {
+  #favorites .span6 {
+    padding-left: 10%;
+    width: 40%;
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+  }
+  #favorites .span6.myself {
+    padding-left: 4%;
+    padding-right: 1%;
+    width: 43%;
+  }
+  #favorites div.spouse {
+    background: url(../images/vertical-heart-seperator.png) no-repeat scroll 0 0 transparent;
+    margin: 0;
+    padding-left: 6%;
+    padding-right: 1%;
+    width: 45%;
+  }
+  #favorites ul.unstyled {
+    margin-top: 20px;
+  }
+  #favorites li {
+    line-height: 1.3em;
+    margin-bottom: 8px;
+  }
+  #favorites li span {
+    display: block;
+    float: left;
+    width: 49%;
+    margin-left: 1%;
+  }
+  #favorites li span.lbl {
+    font-family: 'Rosarivo';
+    color: #584b62;
+    text-transform: uppercase;
+    font-size: 14px;
+    width: 50%;
+    margin: 0;
+  }
+  #favorites li:after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+  }
 }
 .form-container {
   background: #fdf7fc;
