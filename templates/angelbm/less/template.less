@@ -477,6 +477,16 @@ form#freeinfo legend {
 	.border-box;
 	padding-right: 10px;
 }
+.formContainer li.rsform-block-submit input {
+		.btn;
+		.btn-primary;
+		margin: 0 auto;
+		display: block;	
+}
+.formContainer li.rsform-block-submit {
+		width: 50%;
+		margin: 0 auto !important;
+}
 @media (min-width:510px) {
 	.heart-list li:nth-child(odd) {
 		clear: both;
@@ -491,6 +501,11 @@ form#freeinfo legend {
 	font-weight: normal;
 	font-style: italic;
 	margin-bottom: 0;
+}
+@media (max-width:767px) {
+	div.formBody {
+		float: none;
+	}
 }
 @media (min-width:768px) {
 	#favorites .span6 {
@@ -562,17 +577,6 @@ form#freeinfo legend {
 	.formContainer li.rsform-block-due-date {
 		margin-right: 0 !important;
 	}
-	.formContainer li.rsform-block-submit {
-		width: 50%;
-		margin: 0 auto !important;
-	}
-	.formContainer li.rsform-block-submit input {
-		.btn;
-		.btn-primary;
-		margin: 0 auto;
-		display: block;	
-	}
-	
 	.formContainer .formBody {
 		float: none;
 	}

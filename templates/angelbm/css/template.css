@@ -8537,6 +8537,138 @@ form#freeinfo legend {
   box-sizing: border-box;
   padding-right: 10px;
 }
+.formContainer li.rsform-block-submit input {
+  display: inline-block;
+  *display: inline;
+  /* IE7 inline-block hack */
+
+  *zoom: 1;
+  padding: 9px 12px;
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #584b62;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  *background-color: #e6e6e6;
+  border: 1px solid #bbbbbb;
+  *border: 0;
+  border-bottom-color: #a2a2a2;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  *margin-left: .3em;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #bd3060;
+  background-image: -moz-linear-gradient(top, #cd3568, #a62953);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#cd3568), to(#a62953));
+  background-image: -webkit-linear-gradient(top, #cd3568, #a62953);
+  background-image: -o-linear-gradient(top, #cd3568, #a62953);
+  background-image: linear-gradient(to bottom, #cd3568, #a62953);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcd3568', endColorstr='#ffa62953', GradientType=0);
+  border-color: #a62953 #a62953 #691a34;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  *background-color: #a62953;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  margin: 0 auto;
+  display: block;
+}
+.formContainer li.rsform-block-submit input:hover,
+.formContainer li.rsform-block-submit input:focus,
+.formContainer li.rsform-block-submit input:active,
+.formContainer li.rsform-block-submit input.active,
+.formContainer li.rsform-block-submit input.disabled,
+.formContainer li.rsform-block-submit input[disabled] {
+  color: #584b62;
+  background-color: #e6e6e6;
+  *background-color: #d9d9d9;
+}
+.formContainer li.rsform-block-submit input:active,
+.formContainer li.rsform-block-submit input.active {
+  background-color: #cccccc \9;
+}
+.formContainer li.rsform-block-submit input:first-child {
+  *margin-left: 0;
+}
+.formContainer li.rsform-block-submit input:hover,
+.formContainer li.rsform-block-submit input:focus {
+  color: #584b62;
+  text-decoration: none;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+.formContainer li.rsform-block-submit input:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.formContainer li.rsform-block-submit input.active,
+.formContainer li.rsform-block-submit input:active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+}
+.formContainer li.rsform-block-submit input.disabled,
+.formContainer li.rsform-block-submit input[disabled] {
+  cursor: default;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.formContainer li.rsform-block-submit input .label,
+.formContainer li.rsform-block-submit input .badge {
+  position: relative;
+  top: -1px;
+}
+.formContainer li.rsform-block-submit input:hover,
+.formContainer li.rsform-block-submit input:focus,
+.formContainer li.rsform-block-submit input:active,
+.formContainer li.rsform-block-submit input.active,
+.formContainer li.rsform-block-submit input.disabled,
+.formContainer li.rsform-block-submit input[disabled] {
+  color: #ffffff;
+  background-color: #a62953;
+  *background-color: #912449;
+}
+.formContainer li.rsform-block-submit input:active,
+.formContainer li.rsform-block-submit input.active {
+  background-color: #7d1f3f \9;
+}
+.formContainer li.rsform-block-submit input .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+.formContainer li.rsform-block-submit {
+  width: 50%;
+  margin: 0 auto !important;
+}
 @media (min-width: 510px) {
   .heart-list li:nth-child(odd) {
     clear: both;
@@ -8551,6 +8683,11 @@ form#freeinfo legend {
   font-weight: normal;
   font-style: italic;
   margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  div.formBody {
+    float: none;
+  }
 }
 @media (min-width: 768px) {
   #favorites .span6 {
@@ -8625,138 +8762,6 @@ form#freeinfo legend {
   }
   .formContainer li.rsform-block-due-date {
     margin-right: 0 !important;
-  }
-  .formContainer li.rsform-block-submit {
-    width: 50%;
-    margin: 0 auto !important;
-  }
-  .formContainer li.rsform-block-submit input {
-    display: inline-block;
-    *display: inline;
-    /* IE7 inline-block hack */
-  
-    *zoom: 1;
-    padding: 9px 12px;
-    margin-bottom: 0;
-    font-size: 13px;
-    line-height: 18px;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    color: #584b62;
-    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-    background-color: #f5f5f5;
-    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
-    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
-    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
-    background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
-    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-    *background-color: #e6e6e6;
-    border: 1px solid #bbbbbb;
-    *border: 0;
-    border-bottom-color: #a2a2a2;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
-    *margin-left: .3em;
-    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-    box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-    color: #ffffff;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-    background-color: #bd3060;
-    background-image: -moz-linear-gradient(top, #cd3568, #a62953);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#cd3568), to(#a62953));
-    background-image: -webkit-linear-gradient(top, #cd3568, #a62953);
-    background-image: -o-linear-gradient(top, #cd3568, #a62953);
-    background-image: linear-gradient(to bottom, #cd3568, #a62953);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcd3568', endColorstr='#ffa62953', GradientType=0);
-    border-color: #a62953 #a62953 #691a34;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-    *background-color: #a62953;
-    /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-  
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-    margin: 0 auto;
-    display: block;
-  }
-  .formContainer li.rsform-block-submit input:hover,
-  .formContainer li.rsform-block-submit input:focus,
-  .formContainer li.rsform-block-submit input:active,
-  .formContainer li.rsform-block-submit input.active,
-  .formContainer li.rsform-block-submit input.disabled,
-  .formContainer li.rsform-block-submit input[disabled] {
-    color: #584b62;
-    background-color: #e6e6e6;
-    *background-color: #d9d9d9;
-  }
-  .formContainer li.rsform-block-submit input:active,
-  .formContainer li.rsform-block-submit input.active {
-    background-color: #cccccc \9;
-  }
-  .formContainer li.rsform-block-submit input:first-child {
-    *margin-left: 0;
-  }
-  .formContainer li.rsform-block-submit input:hover,
-  .formContainer li.rsform-block-submit input:focus {
-    color: #584b62;
-    text-decoration: none;
-    background-position: 0 -15px;
-    -webkit-transition: background-position 0.1s linear;
-    -moz-transition: background-position 0.1s linear;
-    -o-transition: background-position 0.1s linear;
-    transition: background-position 0.1s linear;
-  }
-  .formContainer li.rsform-block-submit input:focus {
-    outline: thin dotted #333;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
-  }
-  .formContainer li.rsform-block-submit input.active,
-  .formContainer li.rsform-block-submit input:active {
-    background-image: none;
-    outline: 0;
-    -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
-    -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
-    box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
-  }
-  .formContainer li.rsform-block-submit input.disabled,
-  .formContainer li.rsform-block-submit input[disabled] {
-    cursor: default;
-    background-image: none;
-    opacity: 0.65;
-    filter: alpha(opacity=65);
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-  }
-  .formContainer li.rsform-block-submit input .label,
-  .formContainer li.rsform-block-submit input .badge {
-    position: relative;
-    top: -1px;
-  }
-  .formContainer li.rsform-block-submit input:hover,
-  .formContainer li.rsform-block-submit input:focus,
-  .formContainer li.rsform-block-submit input:active,
-  .formContainer li.rsform-block-submit input.active,
-  .formContainer li.rsform-block-submit input.disabled,
-  .formContainer li.rsform-block-submit input[disabled] {
-    color: #ffffff;
-    background-color: #a62953;
-    *background-color: #912449;
-  }
-  .formContainer li.rsform-block-submit input:active,
-  .formContainer li.rsform-block-submit input.active {
-    background-color: #7d1f3f \9;
-  }
-  .formContainer li.rsform-block-submit input .caret {
-    border-top-color: #ffffff;
-    border-bottom-color: #ffffff;
   }
   .formContainer .formBody {
     float: none;
