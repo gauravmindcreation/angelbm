@@ -89,6 +89,11 @@
 	float:none;
 	margin:0 auto;
 }
+.border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 /* Site Body Styles */
 body.site{
@@ -340,7 +345,7 @@ h6 { font-size: 12px; line-height: 14px; }
 
 .sidebar-nav .moduletable {
 	.grayGradient();
-	box-sizing: border-box;
+	.border-box;
 	padding: 20px;
 	
 	h3 {
@@ -374,93 +379,24 @@ h6 { font-size: 12px; line-height: 14px; }
     margin-bottom: 10px !important;
     padding: 0 !important;
 }
-.formContainer li.half {
-	width: 49%;
-	box-sizing: border-box;
-	-moz-box-sizing:border-box;
-	float: left;
-	clear: none !important;
-}
-.formContainer li.full {
-	width: 100%;
-}
 .formContainer textarea {
-	box-sizing: border-box;
-	-moz-box-sizing:border-box;
+	.border-box;
 	width: 100%;
 	border-radius: 0;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.18) inset;
     resize: vertical;
 }
-.formContainer li.half:first-child {
-	margin-right: 2% !important;
-}
-.formContainer li.third {
-	clear: none !important;
-    float: left;
-    margin-right: 3% !important;
-    width: 31.3%;
-	box-sizing: border-box;
-	-moz-box-sizing:border-box;
-}
-.formContainer li.rsform-block-due-date {
-	margin-right: 0 !important;
-}
-.formContainer li input[type="text"], #familyform li select {
-    box-sizing: border-box;
-	-moz-box-sizing:border-box;
+.formContainer li input[type="text"],
+#familyform li select {
+    .border-box;
     height: 30px;
     padding: 4px;
     width: 100% !important;
     border-radius: 0;
     box-shadow: 1px 1px 3px rgba(0,0,0,0.18) inset;
 }
-.formContainer li.rsform-block-submit {
-	width: 50%;
-	margin: 0 auto !important;
-}
-.formContainer li.rsform-block-submit input {
-	.btn;
-	.btn-primary;
-	margin: 0 auto;
-	display: block;	
-}
-
-.formContainer .formBody {
-	float: none;
-}
-form#freeinfo {
-	padding: 20px;
-	clear: both;
-	
-	.rsform-block-firstname,
-	.rsform-block-lastname,
-	.rsform-block-dayphone,
-	.rsform-block-email,
-	.rsform-block-streetaddress,
-	.rsform-block-city,
-	.rsform-block-state,
-	.rsform-block-zip,
-	.rsform-block-age,
-	.rsform-block-duedate,
-	.rsform-block-race,
-	.rsform-block-race2 {
-		float: left;
-		width: 49%;
-		clear: none;
-	}
-	.rsform-block-firstname,
-	.rsform-block-dayphone,
-	.rsform-block-streetaddress,
-	.rsform-block-state,
-	.rsform-block-age,
-	.rsform-block-race {
-		margin-right: 2%;
-	}
-	select {
-		width: 100%;
-	}
-	
+form#freeinfo select {
+	width: 100%;
 }
 .formBody {
 	position: relative;
@@ -529,12 +465,35 @@ form#freeinfo legend {
 #favorites div.single {
 	width: 100%;
 	padding: 0 30px;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+	.border-box;
+}
+#favorites li span.lbl {
+	font-weight: bold;
+}
+.heart-list li {
+	background:url(../images/icon-heart.png) no-repeat scroll 0 5px transparent;
+	padding-left: 40px;
+	min-height: 36px;
+	.border-box;
+	padding-right: 10px;
+}
+@media (min-width:510px) {
+	.heart-list li:nth-child(odd) {
+		clear: both;
+	}
+	.heart-list li {
+		float: left;
+		width: 50%;
+	}
+}
+.heart-list li h3 {
+	font-size: 17px;
+	font-weight: normal;
+	font-style: italic;
+	margin-bottom: 0;
 }
 @media (min-width:768px) {
-		#favorites .span6 {
+	#favorites .span6 {
 	    padding-left: 10%;
 	    width: 40%;
 	    -webkit-box-sizing: inherit;
@@ -573,12 +532,79 @@ form#freeinfo legend {
 		font-size: 14px;
 		width: 50%;
 		margin: 0;
+		font-weight: normal;
 	}
 	#favorites li:after {
 		content: "";
 		display: block;
 		clear: both;
 		visibility: hidden;
+	}
+	.formContainer li.half {
+	width: 49%;
+	.border-box;
+	float: left;
+	clear: none !important;
+	}
+	.formContainer li.full {
+		width: 100%;
+	}
+	.formContainer li.half:first-child {
+		margin-right: 2% !important;
+	}
+	.formContainer li.third {
+		clear: none !important;
+	    float: left;
+	    margin-right: 3% !important;
+	    width: 31.3%;
+		.border-box;
+	}
+	.formContainer li.rsform-block-due-date {
+		margin-right: 0 !important;
+	}
+	.formContainer li.rsform-block-submit {
+		width: 50%;
+		margin: 0 auto !important;
+	}
+	.formContainer li.rsform-block-submit input {
+		.btn;
+		.btn-primary;
+		margin: 0 auto;
+		display: block;	
+	}
+	
+	.formContainer .formBody {
+		float: none;
+	}
+	form#freeinfo {
+		padding: 20px;
+		clear: both;
+		
+		.rsform-block-firstname,
+		.rsform-block-lastname,
+		.rsform-block-dayphone,
+		.rsform-block-email,
+		.rsform-block-streetaddress,
+		.rsform-block-city,
+		.rsform-block-state,
+		.rsform-block-zip,
+		.rsform-block-age,
+		.rsform-block-duedate,
+		.rsform-block-race,
+		.rsform-block-race2 {
+			float: left;
+			width: 49%;
+			clear: none;
+		}
+		.rsform-block-firstname,
+		.rsform-block-dayphone,
+		.rsform-block-streetaddress,
+		.rsform-block-state,
+		.rsform-block-age,
+		.rsform-block-race {
+			margin-right: 2%;
+		}
+		
 	}
 }
 
