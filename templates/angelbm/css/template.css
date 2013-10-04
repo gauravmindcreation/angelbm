@@ -9409,15 +9409,35 @@ div.current dd.tabs {
 .info-packet #userForm li .formCaption {
   width: 33%;
   margin-top: 4px;
+  line-height: 1em;
 }
 .info-packet #userForm .formBody {
   position: relative;
-  width: 66%;
+  /* width:66%; */
+
+  float: left;
 }
 .info-packet #userForm .formBody input {
   width: 100%;
   padding: 4px 0;
   text-indent: 6px;
+}
+.info-packet #userForm .formContainer {
+  margin: 0 0 9px 25px;
+}
+.info-packet #userForm .formContainer li {
+  padding: 5px !important;
+  margin: 0 !important;
+  *zoom: 1;
+}
+.info-packet #userForm .formContainer li:before,
+.info-packet #userForm .formContainer li:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.info-packet #userForm .formContainer li:after {
+  clear: both;
 }
 .info-packet #userForm .rsform-block-duedate .btnCal {
   position: absolute;
