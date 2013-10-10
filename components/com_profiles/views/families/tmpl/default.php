@@ -34,7 +34,7 @@ jQuery(document).ready(function($){
 				profileList.masonry({
 					itemSelector: '.item',
 					isAnimated: true,
-					appendCallback: false
+					appendCallback: false,
 				});
 			});
 		}
@@ -57,6 +57,7 @@ jQuery(document).ready(function($){
 				start: function (opts) {
 					$(opts.contentSelector).infinitescroll('beginAjax', opts);
 				},
+				msgText: "<p>Loading More Families...</p>",
 			}
 		},
 		function (elements, opts) {

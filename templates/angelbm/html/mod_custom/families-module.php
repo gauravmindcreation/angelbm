@@ -59,7 +59,7 @@ JFactory::$database = $oldDbo;
 		<?php //print_r($profile);die;?>
 			<div class="img">
 				<a href="<?php echo JRoute::_('index.php?option=com_profiles&view=profile&Itemid=115&id=' . $profile->id); ?>">
-					<img src="http://www.angeladoptioninc.com/uploads/profiles/<?php echo $profile->id .'/'.$profile->about_us_image;?> " alt=""/>
+					<img src="http://www.angeladoptioninc.com/uploads/profiles/<?php echo $profile->id .'/'.$profile->about_us_image;?>" alt=""/>
 				</a>
 			</div>
 			<a class="name" href="<?php echo JRoute::_('index.php?option=com_profiles&view=profile&Itemid=115&id=' . $profile->id); ?>">
