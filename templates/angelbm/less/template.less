@@ -487,6 +487,42 @@ form#freeinfo legend {
 		width: 50%;
 		margin: 0 auto !important;
 }
+
+
+
+.recent-families {
+	.grayGradient();
+	padding-top: 20px;
+	padding-bottom: 0px;
+	margin-bottom: 30px;
+	
+	h3 {
+		font-weight: normal;
+		text-transform: uppercase;
+		color: @linkColor;
+		
+		a {
+			font-size: 14px;
+			text-transform: none;
+			font-style: italic;
+		}
+	}
+	.span2 {
+		margin-bottom: 20px;
+	}
+	
+	.img img {
+		/* max-height: 90px; */
+		margin: 0 auto;
+		display: block;
+	}
+	a.name {
+		display: block;
+		text-align: center;
+	}
+}
+
+
 @media (min-width:510px) {
 	.heart-list li:nth-child(odd) {
 		clear: both;
@@ -508,6 +544,13 @@ form#freeinfo legend {
 	}
 }
 @media (min-width:768px) {
+
+	.recent-families {
+		img {
+			max-height: 90px;
+		}
+	}
+
 	#favorites .span6 {
 	    padding-left: 10%;
 	    width: 40%;
@@ -886,6 +929,7 @@ div.current dd.tabs {
 	border: 1px solid #CCC;
 	background-color: #FFF;
 }
+
 /* modification for 5 columns */
 @media (min-width: 768px){
     .fivecolumns .span2 {
@@ -1173,6 +1217,58 @@ div.current dd.tabs {
 		}
 	}
 }
+@media (min-width:768px) and (max-width:978px) {
+	.recent-families {
+		.span2 {
+			float: left;
+			width: 32%;
+			margin-left: 2%;
+			
+			img {
+				max-height: 130px;
+			}
+		}
+		.span2:nth-child(4n+4) {
+			margin-left: 0;
+		}
+	}	
+}
+
+@media (min-width: 681px) and (max-width:767px) {
+	.recent-families {
+		.span2 {
+			float: left;
+			width: 32%;
+			margin-left: 2%;
+			
+			img {
+				max-height: 130px;
+			}
+		}
+		.span2:nth-child(4n+4) {
+			margin-left: 0;
+		}
+	}	
+}
+
+@media (min-width: 585px) and (max-width: 680px) {
+	.recent-families {
+		.span2 {
+			float: left;
+			width: 48%;
+			margin-left: 2%;
+			
+			img {
+				max-height: 190px;
+			}
+		}
+		.span2:nth-child(odd) {
+			margin-left: 0;
+			clear: both;
+		}
+	}	
+}
+
 @media (max-width:767px) {
 	.homepage-carousel {
 		.message {
@@ -1277,6 +1373,9 @@ div.current dd.tabs {
 				width:100%;
 				padding:4px 0;
 				text-indent:6px;
+			}
+			input[type="text"] {
+				min-width: 100px;
 			}
 		}
 		.formContainer {
