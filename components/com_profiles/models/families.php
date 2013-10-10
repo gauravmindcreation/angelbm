@@ -102,6 +102,13 @@ class ProfilesModelFamilies extends JModelList
 		{
 			return $this->cache[$store];
 		}
+		
+		$realLimit = $this->getState('list.realLimit');
+		
+		if ($realLimit !== null)
+		{
+			$this->_limit = $realLimit;
+		}
 
 		// Load the list items.
 		$query = $this->_getListQuery();

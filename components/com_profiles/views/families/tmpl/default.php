@@ -47,6 +47,7 @@ jQuery(document).ready(function($){
 			state: {
 				currPage: startingPage
 			},
+			
 			path: function (currPage) {
 				var start = (currPage - 1) * 10;
 				console.log(start);
@@ -55,7 +56,7 @@ jQuery(document).ready(function($){
 			loading: {
 				start: function (opts) {
 					$(opts.contentSelector).infinitescroll('beginAjax', opts);
-				}
+				},
 			}
 		},
 		function (elements, opts) {
