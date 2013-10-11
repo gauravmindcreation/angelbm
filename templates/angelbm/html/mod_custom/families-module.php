@@ -13,14 +13,20 @@ $profilesPath = JPATH_ROOT . '/components/com_profiles';
 include_once $profilesPath . '/models/families.php';
 include_once $profilesPath . '/helpers/profiles.php';
 
+$oldDatabase = JFactory::getDbo();
+
+JFactory::$database = ProfilesHelper::getDbo();
+
 $config = array(
-	'dbo' => ProfilesHelper::getDbo(),
+	'dbo' => JFactory::getDbo(),
 	'ignore_request' => true
 );
 $model = new ProfilesModelFamilies($config);
 $model->setState('list.realLimit', 6);
 
 $families = $model->getItems();
+
+JFactory::$database = $oldDatabase;
 ?>
 
 <div class="container-fluid recent-families">
