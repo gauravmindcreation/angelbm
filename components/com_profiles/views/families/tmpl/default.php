@@ -47,6 +47,10 @@ jQuery(document).ready(function($){
 			state: {
 				currPage: startingPage
 			},
+			loading: {
+				msgText: "<em>Loading the next set of families...</em>",
+				finishedMsg: "<em>No more families found!</em>"
+			},
 			
 			path: function (currPage) {
 				var start = (currPage - 1) * 10;
@@ -162,7 +166,7 @@ foreach($this->families as $family) :
 				<a href="<?php echo $link; ?>"><?php echo $fullname; ?></a>
 			</h3>
 			<div class="text-center">
-				<span>FAMILY TYPE: <span class="muted"><?php echo ProfilesHelper::familyType(); ?></span></span>
+				<span>FAMILY TYPE: <span class="muted"><?php echo ($family->spouse_name ? 'Married' : 'Single Parent');?></span></span>
 			</div>
 			<br />
 			<div class="text-center">
