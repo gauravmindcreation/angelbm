@@ -9,46 +9,18 @@
 
 defined('_JEXEC') or die;
 
-// Set the custom DB Object
-$oldDbo = JFactory::getDbo();
+$profilesPath = JPATH_ROOT . '/components/com_profiles';
+include_once $profilesPath . '/models/families.php';
+include_once $profilesPath . '/helpers/profiles.php';
 
-$conf = JComponentHelper::getParams('com_profiles');
-
-$options = array(
-	'driver' => $conf->get('dbtype'),
-	'host' => $conf->get('host'),
-	'user' => $conf->get('user'),
-	'password' => $conf->get('password'),
-	'database' => $conf->get('db'),
-	'prefix' => $conf->get('dbprefix')
-);
-
-try
-{
-	JFactory::$database = JDatabaseDriver::getInstance($options);
-}
-catch (RuntimeException $e)
-{
-	if (!headers_sent())
-	{
-		header('HTTP/1.1 500 Internal Server Error');
-	}
-
-	jexit('Database Error: ' . $e->getMessage());
-}
-// Do custom db stuff here
-include_once JPATH_ROOT . '/components/com_profiles/models/families.php';
 $config = array(
-	'dbo' => JFactory::getDbo(),
+	'dbo' => ProfilesHelper::getDbo(),
 	'ignore_request' => true
 );
 $model = new ProfilesModelFamilies($config);
 $model->setState('list.realLimit', 6);
 
 $families = $model->getItems();
-
-// Reset to previous connection
-JFactory::$database = $oldDbo;
 ?>
 
 <div class="container-fluid recent-families">

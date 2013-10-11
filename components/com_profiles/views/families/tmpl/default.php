@@ -34,7 +34,7 @@ jQuery(document).ready(function($){
 				profileList.masonry({
 					itemSelector: '.item',
 					isAnimated: true,
-					appendCallback: false,
+					appendCallback: false
 				});
 			});
 		}
@@ -52,12 +52,6 @@ jQuery(document).ready(function($){
 				var start = (currPage - 1) * 10;
 				console.log(start);
 				return "/waiting-families?start=" + start;
-			},
-			loading: {
-				start: function (opts) {
-					$(opts.contentSelector).infinitescroll('beginAjax', opts);
-				},
-				msgText: "<p>Loading More Families...</p>",
 			}
 		},
 		function (elements, opts) {
