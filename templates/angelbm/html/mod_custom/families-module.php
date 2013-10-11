@@ -34,10 +34,10 @@ JFactory::$database = $oldDatabase;
 	<div class="row-fluid">
 		<?php foreach ($families as $profile) : ?>
 		<div class="span2">
-		<?php //print_r($profile);die;?>
+		<?php $aboutImage = str_replace(' ', '%20', $profile->about_us_image)?>
 			<div class="img">
 				<a href="<?php echo JRoute::_('index.php?option=com_profiles&view=profile&Itemid=115&id=' . $profile->id); ?>">
-					<img src="http://www.angeladoptioninc.com/uploads/profiles/<?php echo $profile->id .'/'.$profile->about_us_image;?>" alt=""/>
+					<img src="http://www.angeladoptioninc.com/uploads/profiles/<?php echo $profile->id .'/'.$aboutImage; ?>" alt=""/>
 				</a>
 			</div>
 			<a class="name" href="<?php echo JRoute::_('index.php?option=com_profiles&view=profile&Itemid=115&id=' . $profile->id); ?>">
