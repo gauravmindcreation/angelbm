@@ -10,6 +10,11 @@
 {
 	$(document).ready(function()
 	{
+		
+		$('.carousel').carousel({
+			 interval: 5000
+		})
+	
 		$('*[rel=tooltip]').tooltip({
 			container: 'body'
 		})

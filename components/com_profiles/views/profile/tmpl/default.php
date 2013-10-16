@@ -93,7 +93,6 @@ if($this->gallery)
 	});
 	");
 }
-
 ?>
 <div id="user_profile">
 	<?php if(JRequest::getVar('tmpl') !== 'component'): ?>
@@ -123,7 +122,7 @@ if($this->gallery)
 			?>
 			<div class="buttons">
 				<a href="#contact-form" class="btn btn-primary contact">contact us</a>
-				<?php echo $this->gallery ? '<a class="gallery btn btn-primary" id="ourgallery" href="javascript:void(0);">our gallery</a>' : ''; ?>
+				<?php echo $this->gallery ? '<a class="gallery btn btn-primary" id="ourgallery" href="javascript:void(0);">'. my_or_our() .' gallery</a>' : ''; ?>
 				<?php echo $family->video ? '<a rel="'.$videorel.'" class="video btn btn-primary" href="'.$family->video.'">our video</a>' : ''; ?>
 			</div>
 		</div>
