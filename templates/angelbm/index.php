@@ -175,7 +175,7 @@ else
 		<jdoc:include type="modules" name="footer" style="none" />
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">
 			<p class="pull-right"><a href="#top" id="back-top">back to top</a></p>
-			<p>&copy; <?php echo $sitename; ?> <?php echo date('Y');?></p>
+			<p>&copy; <?php echo date('Y');?> <?php echo $sitename; ?></p>
 		</div>
 	</footer>
 </div>
