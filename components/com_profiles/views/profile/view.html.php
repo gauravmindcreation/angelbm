@@ -42,7 +42,7 @@ class ProfilesViewProfile extends JViewLegacy
 	{
 		$title = $this->family->first_name;
 		
-		if (isset($this->family->spouse_name))
+		if (!empty($this->family->spouse_name))
 		{
 			$title .= ' & ' . $this->family->spouse_name . ' are ';
 		}

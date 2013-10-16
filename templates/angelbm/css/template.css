@@ -8235,6 +8235,7 @@ h4,
 h5,
 h6 {
   margin: 12px 0;
+  font-family: 'Rosarivo', sans-serif;
 }
 h1 > a,
 h2 > a,
@@ -8258,8 +8259,8 @@ h6 > a:hover {
   color: #6c1447;
 }
 h1 {
-  font-size: 40px;
-  line-height: 42px;
+  font-size: 39px;
+  line-height: 41px;
 }
 h2 {
   font-size: 30px;
@@ -9161,6 +9162,12 @@ div.current dd.tabs {
   background-repeat: 0;
   border-bottom: 1px solid #fbd5eb;
 }
+hr.stripe {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAGCAYAAAF8/GTdAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAERJREFUeNpiiPBOmgQQQAz///9nAAggBiBrJogBEECMIIKJAQgAAgguBMIAAQQWBgGIFDIDIMBQ1MEwQhYJgASfoAsCAGHBJUR8ZxdIAAAAAElFTkSuQmCC);
+  background-repeat: repeat-x;
+  height: 6px;
+  background-position: left center;
+}
 .styled-select {
   position: relative;
   overflow: hidden;
@@ -9485,15 +9492,16 @@ div.current dd.tabs {
 .info-packet h4 {
   text-indent: -9999px;
   outline: none;
-  background: url(../img/infopacket_title.png) no-repeat;
   display: block;
   width: 245px;
   height: 59px;
-  padding: 0!important;
-  margin: 18px auto;
+  padding: 0;
+  margin: 0 auto 36px;
   background-size: 100% 100%;
   background-image: url(../img/infopacket_title.svg);
   border-bottom: none;
+  position: relative;
+  top: 18px;
 }
 .info-packet #userForm {
   background: #eeecef;
@@ -9547,6 +9555,7 @@ div.current dd.tabs {
   top: 5px;
   width: auto;
   text-indent: 0;
+  height: 22px;
 }
 .info-packet #userForm .rsform-block-send .formBody {
   text-align: center;
