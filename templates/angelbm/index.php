@@ -87,6 +87,11 @@ else
 		$fullName = $this->params->get('googleFontName');
 		list($fontFamily, $sizes) = explode(':', $fullName); ?>
 		<link href='http://fonts.googleapis.com/css?family=<?php echo $fullName; ?>' rel='stylesheet' type='text/css' />
+		<style type="text/css">
+			h1,h2,h3,h4,h5,h6,.site-title{
+				font-family: '<?php echo str_replace('+', ' ', $fontFamily);?>', sans-serif;
+			}
+		</style>
 	<?php endif; ?>
 	<!--[if lt IE 9]>
 		<script src="<?php echo $this->baseurl ?>/media/jui/js/html5.js"></script>
