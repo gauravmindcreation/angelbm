@@ -45,7 +45,8 @@ $selectedReligion = $app->getUserState('filter.family_religion');
 
 $query = $db->getQuery(true)
 	->select('a.my_religion, a.spouse_religion')
-	->from('#__profiles_families AS a');
+	->from('#__profiles_families AS a')
+	->where('a.state = 1');
 
 $religionOptions = $db->setQuery($query)->loadObjectList();
 
@@ -54,7 +55,7 @@ $spouse_religion = JArrayHelper::getColumn($religionOptions, 'spouse_religion');
 
 $combined = array_merge($my_religion, $spouse_religion);
 array_walk($combined, function(&$value, $key) {
-	$value = rtrim($value);
+	$value = trim($value);
 });
 $combined = array_unique($combined);
 asort($combined);
