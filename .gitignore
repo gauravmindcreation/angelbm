@@ -1,3 +1,4 @@
+/.idea
 /logs/*
 /tmp/*
 /cgi-bin
@@ -8,3 +9,7 @@ robots.txt.dst
 web.config.txt
 /installation
 /configuration.php
+/configuration.php.bak
+/angelbm.sql
+/cache/page/*
+!/cache/page/index.html

@@ -1,3 +1,55 @@
+# Turn on Expires and set default to 0
+ExpiresActive On
+ExpiresDefault A0
+
+# Set up caching on media files for 1 year (forever?)
+<FilesMatch "\.(flv|ico|pdf|avi|mov|ppt|doc|mp3|wmv|wav)$">
+ExpiresDefault A29030400
+Header append Cache-Control "public"
+</FilesMatch>
+
+# Set up caching on media files for 1 week
+<FilesMatch "\.(gif|jpg|jpeg|png|swf)$">
+ExpiresDefault A604800
+Header append Cache-Control "public"
+</FilesMatch>
+
+# Set up 2 Hour caching on commonly updated files
+<FilesMatch "\.(xml|txt|js|css)$">
+ExpiresDefault A604800
+Header append Cache-Control "proxy-revalidate"
+</FilesMatch>
+
+<FilesMatch "\.(js|css|xml|gz)$">
+Header append Vary Accept-Encoding
+</FilesMatch>
+
+# Force no caching for dynamic files
+<FilesMatch "\.(php|cgi|pl|htm)$">
+ExpiresActive Off
+Header set Cache-Control "private, no-cache, no-store, proxy-revalidate, no-transform"
+Header set Pragma "no-cache"
+</FilesMatch>
+
+AddEncoding gzip .gz
+<Files *.css.gz>
+  ForceType text/css
+</Files>
+<Files *.js.gz>
+  ForceType text/javascript
+</Files>
+<FilesMatch .*\.(js|css)>
+  RewriteEngine On
+  RewriteCond %{HTTP_USER_AGENT} !MSIE
+  RewriteCond %{HTTP:Accept-encoding} gzip
+  RewriteCond %{REQUEST_FILENAME}.gz -f
+  RewriteRule ^(.*)$ $1.gz [L]
+</FilesMatch>
+
+AddDefaultCharset UTF-8
+AddType 'text/html; charset=UTF-8' .html
+
+
 ##
 # @package		Joomla
 # @copyright	Copyright (C) 2005 - 2013 Open Source Matters. All rights reserved.
