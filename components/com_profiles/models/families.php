@@ -26,28 +26,6 @@ class ProfilesModelFamilies extends JModelList
 	protected $_items;
 	protected $_title = null;
 	protected $_pagination = null;
-	
-	protected $_limit;
-	protected $_start;
-	
-	public function __construct()
-	{
-		parent::__construct();
-		
-		$app = JFactory::getApplication();
-		$params = $app->getParams();
-		
-		// Have to set limit manually below, because fucking Joomla doesn't know how to setState properly.
-		//$limit = $app->getUserStateFromRequest('global.list.limit', 'limit', 10, 'int');
-		
-		$start = JRequest::getVar('start', 0, '', 'int');
-		
-		$this->_limit = (JBrowser::getInstance()->isMobile()) ? 5 : $params->get('profiles_to_show', 10);
-		$this->_start = ($this->_limit != 0 ? (floor($start / $this->_limit) * $this->_limit) : 0);
-		
-		$this->setState('list.limit', $this->_limit);
-		$this->setState('list.start', $this->_start);
-	}
 
 	/**
 	 * Method to auto-populate the model state.
@@ -56,7 +34,6 @@ class ProfilesModelFamilies extends JModelList
 	 */
 	protected function populateState($ordering = null, $direction = null)
 	{
-		
 		// Initialise variables.
 		$app = JFactory::getApplication();
 
@@ -71,15 +48,18 @@ class ProfilesModelFamilies extends JModelList
 		$search = $app->getUserStateFromRequest($this->context.'.filter.search', 'filter_search');
 		$this->setState('filter.search', $search);
 
-		$familyType = $app->getUserStateFromRequest('filter.family_type', 'filter_family_type');
+		$familyType = $app->getUserStateFromRequest($this->context.'.filter.family_type', 'filter_family_type');
 		$this->setState('filter.family_type', $familyType);
 
-		$familyReligion = $app->getUserStateFromRequest('filter.family_religion', 'filter_family_religion');
+		$familyReligion = $app->getUserStateFromRequest($this->context.'.filter.family_religion', 'filter_family_religion');
 		$this->setState('filter.family_religion', $familyReligion);
 
 		// Load the parameters.
 		$params = JComponentHelper::getParams('com_profiles');
 		$this->setState('params', $params);
+
+		$limit = (JBrowser::getInstance()->isMobile()) ? 5 : $params->get('profiles_to_show', 10);
+		$this->setState('list.limit', $limit);
 		
 		// List state information.
 		parent::populateState('a.ordering', 'asc');
@@ -102,25 +82,18 @@ class ProfilesModelFamilies extends JModelList
 		{
 			return $this->cache[$store];
 		}
-		
-		$realLimit = $this->getState('list.realLimit');
-		
-		if ($realLimit !== null)
-		{
-			$this->_limit = $realLimit;
-		}
 
 		// Load the list items.
-		$query = $this->_getListQuery();
-		$items = $this->_getList($query, $this->_start, $this->_limit);
+		$items = parent::getItems();
 
+		// If none are found, try again without filtering..
 		if (empty($items))
 		{
 			JFactory::getApplication()->setUserState($this->context . '.filter.search', null);
 			$this->setState('filter.search', null);
 
 			$query = $this->_getListQuery();
-			$items = $this->_getList($query, $this->_start, $this->_limit);
+			$items = $this->_getList($query, $this->getStart(), $this->getState('list.limit'));
 
 			$this->setError('Sorry, but we did not find any matches for your search request. Please try again.');
 		}
@@ -177,7 +150,7 @@ class ProfilesModelFamilies extends JModelList
 		}
 
 		// Create the pagination object.
-		$page = new ProfilePagination($this->getTotal(), $this->_start, $this->_limit);
+		$page = new ProfilePagination($this->getTotal(), $this->getStart(), $this->getState('list.limit'));
 
 		// Add the object to the internal cache.
 		$this->cache[$store] = $page;
@@ -193,8 +166,7 @@ class ProfilesModelFamilies extends JModelList
 			->select('a.*')
 			->from('`#__profiles_families` AS a')
 			->where('a.state = 1')
-			->where('a.profile_status < 3')
-			->order('ordering ASC');
+			->where('a.profile_status = 0'); // Statuses: 0 = waiting, 2 = connected, 3 = adopted
 
 		// Filter by search in title
 		$search = $this->getState('filter.search');
@@ -209,7 +181,7 @@ class ProfilesModelFamilies extends JModelList
 					continue;
 				}
 
-				$search = $db->quote('%' . $db->getEscaped($search, true) . '%');
+				$search = $db->quote('%' . $db->escape($search, true) . '%');
 				$q->where('(a.first_name LIKE ' . $search . '  OR  a.spouse_name LIKE ' . $search . '  OR  a.last_name LIKE ' . $search . ')');
 			}
 		}
@@ -231,6 +203,18 @@ class ProfilesModelFamilies extends JModelList
 			$religion = $db->escape($familyReligion);
 
 			$q->where("(a.my_religion LIKE '%{$religion}%' OR a.spouse_religion LIKE '%{$religion}%')");
+		}
+
+		$direction = $this->getState('list.direction');
+		$ordering  = $this->getState('list.ordering');
+
+		if ($ordering === 'RAND')
+		{
+			$q->order('RAND()');
+		}
+		else
+		{
+			$q->order($ordering . ' ' . $direction);
 		}
 
 		return $q;

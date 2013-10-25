@@ -22,7 +22,8 @@ $config = array(
 	'ignore_request' => true
 );
 $model = new ProfilesModelFamilies($config);
-$model->setState('list.realLimit', 6);
+$model->setState('list.limit', 6);
+$model->setState('list.ordering', 'RAND');
 
 $families = $model->getItems();
 
