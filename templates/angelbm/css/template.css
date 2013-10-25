@@ -8390,6 +8390,101 @@ h6 {
     text-shadow: 1px 1px 1px #FFFFFF;
   }
 }
+.below-header-modules.container-fluid {
+  padding: 0;
+}
+.below-header-modules.container-fluid .moduletable {
+  background-color: #fdf7fc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.below-header-modules.container-fluid .moduletable p {
+  font-style: italic;
+  color: #584b62;
+  font-size: 16px;
+  line-height: 1.3em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 15px 0;
+}
+.below-header-modules.container-fluid .moduletable h3 {
+  margin: 15px 0;
+}
+.below-header-modules.container-fluid .moduletable h3.caps {
+  color: #ac2072;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: normal;
+}
+.below-header-modules.container-fluid .moduletable h3.packet {
+  text-align: center;
+  font-size: 32px;
+  font-weight: normal;
+  position: relative;
+  top: 10px;
+  line-height: 1em;
+  margin: 0;
+}
+.below-header-modules.container-fluid .moduletable h3.packet span {
+  display: block;
+  font-size: 20px;
+  color: #ac2072;
+  text-transform: uppercase;
+  padding-top: 6px;
+}
+.below-header-modules.container-fluid .moduletable h3.packet + p {
+  margin: 2px 0;
+}
+.below-header-modules.container-fluid .moduletable:first-child {
+  margin-left: 0;
+}
+.below-header-modules.container-fluid .moduletable:first-child,
+.below-header-modules.container-fluid .moduletable:last-child {
+  background: url(../images/bg-heart.png) no-repeat 10px 3px #fdf7fc;
+}
+@media (min-width: 768px) {
+  .below-header-modules.container-fluid {
+    padding: 0;
+  }
+  .below-header-modules.container-fluid .moduletable {
+    width: 31.9149%;
+    float: left;
+    margin-left: 2.12766%;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .below-header-modules.container-fluid .moduletable {
+    min-height: 23em;
+  }
+  .below-header-modules.container-fluid .moduletable h3 {
+    min-height: 70px;
+    top: 0 !important;
+    margin: 15px 0 !important;
+  }
+  .below-header-modules.container-fluid .moduletable p {
+    min-height: 5.2em;
+    margin: 15px 0 !important;
+  }
+}
+@media (min-width: 980px) {
+  h3.packet:before {
+    background: url(../images/packet-small.png) no-repeat 0 0 transparent;
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: -20px;
+    float: left;
+  }
+  h3.packet + p {
+    margin: 5px 0 !important;
+  }
+}
 .sidebar-nav .moduletable {
   background: #eeecef;
   background: -moz-linear-gradient(top, #eeecef 0%, #f8f8f9 10%, #ffffff 25%, #ffffff 75%, #f8f8f9 90%, #eeecef 100%, #ffffff 100%);
@@ -9077,13 +9172,6 @@ form#freeinfo legend {
   #login-form .input-small {
     width: 62px;
   }
-  body.site > .container {
-    padding-top: 165px;
-  }
-  .header {
-    width: auto;
-    height: 155px;
-  }
 }
 dl.tabs {
   float: left;
@@ -9397,6 +9485,15 @@ hr.stripe {
 .homepage-carousel .message p {
   line-height: 2em;
   margin: 2em 0;
+}
+@media (min-width: 768px) and (max-width: 978px) {
+  body.site > .container {
+    padding-top: 165px;
+  }
+  .header {
+    width: auto;
+    height: 155px;
+  }
 }
 @media (max-width: 979px) {
   .homepage-carousel .message {

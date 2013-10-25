@@ -155,7 +155,13 @@ else
 			<?php endif; ?>
 			<main id="content" role="main" class="<?php echo $span;?>">
 				<!-- Begin Content -->
-				<jdoc:include type="modules" name="position-3" style="xhtml" />
+				<?php if ($this->countModules('position-3')) : ?>
+					<div class="below-header-modules container-fluid">
+						<div class="row-fluid">
+							<jdoc:include type="modules" name="position-3" style="xhtml" />
+						</div>
+					</div>
+				<?php endif; ?>
 				<jdoc:include type="message" />
 				<jdoc:include type="component" />
 				<jdoc:include type="modules" name="position-2" style="none" />
