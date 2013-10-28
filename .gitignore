@@ -13,3 +13,5 @@ web.config.txt
 /angelbm.sql
 /cache/page/*
 !/cache/page/index.html
+*.DS_Store
+media/rsform*
