@@ -54,7 +54,6 @@ jQuery(document).ready(function($){
 			
 			path: function (currPage) {
 				var start = (currPage - 1) * 10;
-				console.log(start);
 				return "/waiting-families?start=" + start;
 			}
 		},
