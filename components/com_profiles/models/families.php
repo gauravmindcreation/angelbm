@@ -63,6 +63,10 @@ class ProfilesModelFamilies extends JModelList
 		
 		// List state information.
 		parent::populateState('a.ordering', 'asc');
+
+		// Never keep state on the list.start
+		$start = $app->input->getInt('start');
+		$this->setState('list.start', $start);
 	}
 
 	/**
