@@ -57,12 +57,15 @@ class ProfilesModelFamilies extends JModelList
 		// Load the parameters.
 		$params = JComponentHelper::getParams('com_profiles');
 		$this->setState('params', $params);
-
-		$limit = (JBrowser::getInstance()->isMobile()) ? 5 : $params->get('profiles_to_show', 10);
-		$this->setState('list.limit', $limit);
 		
 		// List state information.
 		parent::populateState('a.ordering', 'asc');
+
+		// Overwrite limit and state set from parent.
+		$limit = (JBrowser::getInstance()->isMobile()) ? 5 : $params->get('profiles_to_show', 10);
+		$this->setState('list.limit', $limit);
+		$start = $app->input->getInt('start');
+		$this->setState('list.start', $start);
 	}
 
 	/**
