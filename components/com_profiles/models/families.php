@@ -115,6 +115,32 @@ class ProfilesModelFamilies extends JModelList
 	}
 
 	/**
+	 * Method to get the starting number of items for the data set.
+	 *
+	 * @return  integer  The starting number of items available in the data set.
+	 *
+	 * @since   12.2
+	 */
+	public function getStart()
+	{
+		$store = $this->getStoreId('getstart');
+
+		// Try to load the data from internal storage.
+		if (isset($this->cache[$store]))
+		{
+			return $this->cache[$store];
+		}
+
+		$start = $this->getState('list.start');
+		$limit = $this->getState('list.limit');
+
+		// Add the total to the internal cache.
+		$this->cache[$store] = $start;
+
+		return $this->cache[$store];
+	}
+
+	/**
 	 * Method to get a store id based on the model configuration state.
 	 *
 	 * This is necessary because the model is used by the component and
